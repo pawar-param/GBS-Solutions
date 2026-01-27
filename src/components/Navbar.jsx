@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import axios from "axios";
-import logo from "../../public/Image/shodhcraft png.PNG";
+import logo from "../../public/Image/shodhcraft png.png";
 
 const navItems = [
   { name: "Home", path: "/" },
