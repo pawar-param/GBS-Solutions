@@ -64,6 +64,7 @@ const Contact = () => {
   };
   const navigate = useNavigate();
 
+  // hh
   const goToServices = () => {
     navigate("/#services");
   };
