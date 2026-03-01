@@ -6,9 +6,11 @@ import {
   MapPin,
   Linkedin,
   Facebook,
+  Twitter,
+  Instagram,
   ChevronUp,
 } from "lucide-react";
-import logo from "../../public/Image/GBS-white-logo.png";
+import logo from "../../public/Image/ABS logo head.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -31,6 +33,29 @@ const Footer = () => {
     "Consulting & Training",
   ];
 
+  const socialLinks = [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/111159992/",
+      icon: <Linkedin />,
+    },
+    {
+      label: "Instagram",
+      href: "https://www.instagram.com/absglobalexim?igsh=NXNsdWRqbHF0c2ho",
+      icon: <Instagram />,
+    },
+    {
+      label: "Twitter",
+      href: "https://x.com/GorakhShel72103",
+      icon: <Twitter />,
+    },
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=61587915955385",
+      icon: <Facebook />,
+    },
+  ];
+
   return (
     <footer className="bg-gray-900 text-white relative ">
       {/* Scroll to top */}
@@ -49,31 +74,43 @@ const Footer = () => {
             <div className="flex items-center mb-4">
               <img
                 src={logo}
-                alt="GBS Global Solutions Logo"
-                className=" w-45 object-cover"
+                alt="ABS Global Exim Logo"
+                className=" w-25 object-cover"
               />
+              <span className="text-xl font-bold text-amber-100">
+                ABS Global Exim
+              </span>
             </div>
             <p className="text-gray-300 leading-relaxed max-w-md">
-              GBS Global Solutions Pvt. Ltd. is a Pune-based export–import and
-              global trade management company supporting SMEs, manufacturers,
-              traders, startups, and international buyers.
+              ABS Global Exim. is a Pune-based export–import and global trade
+              management company supporting SMEs, manufacturers, traders,
+              startups, and international buyers.
             </p>
 
             <div className="flex space-x-4 mt-4">
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded hover:bg-slate-600 transition"
-                aria-label="Facebook"
-              >
-                <Facebook className="h-5 w-5" />
-              </a>
-              <a
-                href="#"
-                className="p-2 bg-gray-800 rounded hover:bg-slate-600 transition"
-                aria-label="LinkedIn"
-              >
-                <Linkedin className="h-5 w-5" />
-              </a>
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow hover:shadow-lg transition-all duration-300 hover:scale-110"
+                  title={social.label}
+                >
+                  {React.cloneElement(social.icon, {
+                    className:
+                      social.label === "LinkedIn"
+                        ? "h-6 w-6 text-blue-600"
+                        : social.label === "Instagram"
+                          ? "h-6 w-6 text-pink-500"
+                          : social.label === "Twitter"
+                            ? "h-6 w-6 text-sky-500"
+                            : social.label === "Facebook"
+                              ? "h-6 w-6 text-blue-700"
+                              : "h-6 w-6 text-slate-700",
+                  })}
+                </a>
+              ))}
             </div>
           </div>
 
@@ -115,11 +152,11 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start">
               <Mail className="h-5 w-5 text-slate-600 mr-2" />
-              <span className="text-gray-300">info@gbsglobalsolutions.com</span>
+              <span className="text-gray-300">info@absglobalexim.com</span>
             </div>
             <div className="flex items-center justify-center md:justify-start">
               <Phone className="h-5 w-5 text-slate-600 mr-2" />
-              <span className="text-gray-300">+91 9881491347</span>
+              <span className="text-gray-300">+91 9175318983</span>
             </div>
             <div className="flex items-center justify-center md:justify-start">
               <MapPin className="h-5 w-5 text-slate-600 mr-2" />
@@ -132,8 +169,7 @@ const Footer = () => {
         <div className="border-t border-gray-800 mt-8 pt-6 text-center">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
             <p className="mb-4 md:mb-0">
-              © {new Date().getFullYear()} GBS Global Solutions Pvt. Ltd. All
-              rights reserved.
+              © {new Date().getFullYear()} ABS Global Exim. All rights reserved.
             </p>
             <div className="flex space-x-6">
               <a href="#" className="hover:text-white transition">

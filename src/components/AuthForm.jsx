@@ -59,7 +59,7 @@ const AuthForm = () => {
         <p className="text-center text-gray-600 mb-6">
           {isLogin
             ? "Login to access your dashboard"
-            : "Sign up to start your journey with GBS Global Solutions"}
+            : "Sign up to start your journey with ABS Global Exim"}
         </p>
 
         {/* Form */}

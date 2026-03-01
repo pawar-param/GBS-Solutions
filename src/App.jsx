@@ -36,17 +36,17 @@ function App() {
   }, [user]);
 
   // Backend ping
-  useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL;
-    if (!apiUrl) return;
+  // useEffect(() => {
+  //   const apiUrl = import.meta.env.VITE_API_URL;
+  //   if (!apiUrl) return;
 
-    fetch(`${apiUrl}/ping`)
-      .then((res) => res.text())
-      .then((data) => console.log("✅ Connected to backend:", data))
-      .catch((err) =>
-        console.error("❌ Backend connection error:", err)
-      );
-  }, []);
+  //   fetch(`${apiUrl}/ping`)
+  //     .then((res) => res.text())
+  //     .then((data) => console.log("✅ Connected to backend:", data))
+  //     .catch((err) =>
+  //       console.error("❌ Backend connection error:", err)
+  //     );
+  // }, []);
 
   return (
     <AuthContext.Provider value={{ user, setUser }}>

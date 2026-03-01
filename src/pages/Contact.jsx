@@ -82,34 +82,26 @@ const Contact = () => {
     };
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL;
-
-      const response = await fetch(`${apiUrl}/contact`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbzaN4OUHtpqQ3nFOPt1ctkY_ucpxJHGTJx10u3E6IEwBTt2XxLGaVjWzFc4qry0iLNv/exec",
+        {
+          method: "POST",
+          body: JSON.stringify(reqdata), // ❌ No headers
         },
-        body: JSON.stringify(reqdata),
+      );
+
+      toast.success("Form submitted successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        phone: "",
+        subject: "",
+        message: "",
       });
-
-      const data = await response.json();
-
-      if (data.success) {
-        toast.success(data.message);
-        setFormData({
-          name: "",
-          email: "",
-          company: "",
-          phone: "",
-          subject: "",
-          message: "",
-        });
-      } else {
-        toast.error(data.message || "Submission failed.");
-      }
     } catch (error) {
-      console.error("❌ Error submitting contact form:", error);
-      toast.error("Error submitting form. Try again later.");
+      toast.error("Error submitting form.");
     }
   };
 
@@ -117,18 +109,18 @@ const Contact = () => {
     {
       icon: <Phone className="h-6 w-6" />,
       title: "Phone",
-      content: "+91 9881491347",
+      content: "+91 9175318983",
       subtitle: "Mon-Fri 9AM-6PM",
       gradient: "from-blue-500 to-cyan-500",
-      href: "tel:+919881491347",
+      href: "tel:+919175318983",
     },
     {
       icon: <Mail className="h-6 w-6" />,
       title: "Email",
-      content: "info@gbsglobalsolutions.com",
+      content: "info@absglobalexim.com",
       subtitle: "24/7 Support",
       gradient: "from-purple-500 to-pink-500",
-      href: "mailto:info@gbsglobalsolutions.com",
+      href: "mailto:info@absglobalexim.com",
     },
     {
       icon: <MapPin className="h-6 w-6" />,
@@ -159,14 +151,24 @@ const Contact = () => {
 
   const socialLinks = [
     {
-      icon: <Linkedin className="h-5 w-5" />,
-      href: "https://www.linkedin.com/company/shodhcraft-infotech/",
       label: "LinkedIn",
+      href: "https://www.linkedin.com/company/111159992/",
+      icon: <Linkedin />,
     },
     {
-      icon: <Instagram className="h-5 w-5" />,
-      href: "https://www.instagram.com/shodhcraft?igsh=MThpenRxdG9saHd0bw==",
       label: "Instagram",
+      href: "https://www.instagram.com/absglobalexim?igsh=NXNsdWRqbHF0c2ho",
+      icon: <Instagram />,
+    },
+    {
+      label: "Twitter",
+      href: "https://x.com/GorakhShel72103",
+      icon: <Twitter />,
+    },
+    {
+      label: "Facebook",
+      href: "https://www.facebook.com/profile.php?id=61587915955385",
+      icon: <Facebook />,
     },
   ];
 
@@ -191,13 +193,11 @@ const Contact = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Contact
                 <br />
-                <span className="text-blue-400">GBS Global Solutions</span>
+                <span className="text-blue-400">ABS Global Exim</span>
               </h1>
 
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
-                <strong className="text-white">
-                  GBS Global Solutions Pvt. Ltd.
-                </strong>
+                <strong className="text-white">ABS Global Exim.</strong>
                 -is a trusted Pune-based export–import and global trade
                 management partner, helping businesses worldwide navigate
                 cross-border trade with confidence and compliance. We offer
@@ -210,13 +210,6 @@ const Contact = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="/contact-form"
-                  className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-xl font-medium transition"
-                >
-                  Contact Us
-                </a>
-
                 <a
                   href="/services"
                   className="border border-slate-600 text-gray-200 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition"
@@ -306,7 +299,6 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Form Section */}
       {/* Contact Form Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-50/50 to-blue-50/30">
         <div className="container mx-auto px-6">
@@ -561,6 +553,7 @@ const Contact = () => {
                   <h3 className="text-xl font-bold text-slate-900 mb-4">
                     Follow Us
                   </h3>
+
                   <div className="flex space-x-4">
                     {socialLinks.map((social, index) => (
                       <a
@@ -568,7 +561,7 @@ const Contact = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow hover:shadow-lg transition-transform duration-300 hover:scale-110"
+                        className="w-12 h-12 bg-white rounded-xl flex items-center justify-center shadow hover:shadow-lg transition-all duration-300 hover:scale-110"
                         title={social.label}
                       >
                         {React.cloneElement(social.icon, {
@@ -577,7 +570,11 @@ const Contact = () => {
                               ? "h-6 w-6 text-blue-600"
                               : social.label === "Instagram"
                                 ? "h-6 w-6 text-pink-500"
-                                : "h-6 w-6 text-slate-700",
+                                : social.label === "Twitter"
+                                  ? "h-6 w-6 text-sky-500"
+                                  : social.label === "Facebook"
+                                    ? "h-6 w-6 text-blue-700"
+                                    : "h-6 w-6 text-slate-700",
                         })}
                       </a>
                     ))}
@@ -609,7 +606,7 @@ const Contact = () => {
           >
             {/* Header */}
             <h2 className="text-4xl md:text-5xl font-extrabold mb-6">
-              Ready to Connect with GBS Global Solutions?
+              Ready to Connect with ABS Global Exim?
             </h2>
             <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
               Reach out to us for IT services, freelancing solutions, project
@@ -620,7 +617,7 @@ const Contact = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+919881491347"
+                href="tel:+919175318983"
                 className="group inline-flex items-center justify-center bg-slate-600 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-slate-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Call Now

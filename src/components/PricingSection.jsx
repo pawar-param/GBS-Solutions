@@ -238,7 +238,7 @@ const PricingSection = () => {
             <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
           </a>
           <a
-            href="https://wa.me/919881491347"
+            href="https://wa.me/919175318983"
             className="ml-4 inline-flex items-center justify-center border border-slate-400 text-gray-700 hover:border-blue-500 hover:text-blue-400 px-10 py-4 rounded-xl font-medium transition-all duration-300"
           >
             WhatsApp Our Trade Expert

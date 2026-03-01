@@ -109,7 +109,7 @@ const Services = () => {
                 Speak with a Consultant
               </a>
               <a
-                href="https://wa.me/919881491347"
+                href="https://wa.me/919175318983"
                 className="border border-slate-400 text-blue-100 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition"
               >
                 Chat on WhatsApp
@@ -163,7 +163,7 @@ const Services = () => {
             {/* LEFT: Why Choose Us */}
             <div>
               <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-6">
-                Why Choose GBS Global Solutions?
+                Why Choose ABS Global Exim?
               </h2>
 
               <p className="text-lg text-gray-600 leading-relaxed mb-8 max-w-xl">

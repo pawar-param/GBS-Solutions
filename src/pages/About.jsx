@@ -10,6 +10,9 @@ import {
   ArrowRight,
   CheckCircle,
 } from "lucide-react";
+import gorakhImg from "../../public/Image/Gorakh.png";
+import mitkarImg from "../../public/Image/Mitkar.png";
+import santoshImg from "../../public/Image/Santosh.png";
 
 const About = () => {
   const [isVisible, setIsVisible] = useState({});
@@ -111,16 +114,14 @@ const About = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 About
                 <br />
-                <span className="text-blue-400">GBS Global Solutions</span>
+                <span className="text-blue-400">ABS Global Exim</span>
               </h1>
 
               {/* Description */}
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
-                <strong className="text-white">
-                  GBS Global Solutions Pvt. Ltd.
-                </strong>{" "}
-                is a Pune-based export–import and global trade management
-                company supporting SMEs, manufacturers, traders, startups, and
+                <strong className="text-white">ABS Global Exim.</strong> is a
+                Pune-based export–import and global trade management company
+                supporting SMEs, manufacturers, traders, startups, and
                 international buyers. We simplify global trade through
                 compliance, transparency, and expert execution.
               </p>
@@ -182,9 +183,9 @@ const About = () => {
               </h2>
               <div className="w-28 h-1 bg-gradient-to-r from-blue-700 to-blue-500 mx-auto mb-6 rounded-full"></div>
               <p className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-                GBS Global Solutions Pvt. Ltd. is a technology-driven global
-                trade partner helping businesses navigate international markets
-                with confidence, compliance, and clarity.
+                ABS Global Exim. is a technology-driven global trade partner
+                helping businesses navigate international markets with
+                confidence, compliance, and clarity.
               </p>
             </div>
 
@@ -232,8 +233,13 @@ const About = () => {
                     execution.
                   </p>
                   <div className="flex items-center text-blue-300 hover:text-blue-400 transition-colors cursor-pointer font-medium">
-                    <span className="mr-2">Partner With Us</span>
-                    <ArrowRight className="h-5 w-5" />
+                    <a
+                      href="/contact"
+                      className="flex items-center text-blue-300 hover:text-blue-400 transition-colors duration-200 cursor-pointer font-medium"
+                    >
+                      <span className="mr-2">Partner With Us</span>
+                      <ArrowRight className="h-5 w-5" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -259,24 +265,29 @@ const About = () => {
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto mb-6 rounded-full"></div>
               <p className="text-lg md:text-xl text-gray-700 max-w-2xl mx-auto leading-relaxed">
-                Meet the visionaries behind GBS Global Solutions – driving
+                Meet the visionaries behind ABS Global Exim – driving
                 innovation, excellence, and real-world IT solutions with
                 expertise and passion.
               </p>
             </div>
 
             {/* Leadership Grid */}
-            <div className="grid gap-8 sm:grid-cols-2 max-w-4xl mx-auto">
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-7xl mx-auto">
               {[
                 {
-                  name: "Jivan Mate",
-                  role: "Founder & Managing Partner",
-                  gradient: "from-slate-600 to-slate-600",
+                  name: "Mr. Gorakh Baban Shelke",
+                  role: "Founder & Chief Executive Officer (CEO)",
+                  image: gorakhImg,
                 },
                 {
-                  name: "Meghraj Jogdand",
-                  role: "Co-Founder & Operations Head",
-                  gradient: "from-slate-600 to-slate-600",
+                  name: "Dr. Gorakhnath Sitaram Mitkar",
+                  role: "Co-Founder & Chief Executive Officer (CEO)",
+                  image: mitkarImg,
+                },
+                {
+                  name: "Mr. Santosh Babanrao Shelke",
+                  role: "Managing Director",
+                  image: santoshImg,
                 },
               ].map((leader, index) => (
                 <div
@@ -289,20 +300,27 @@ const About = () => {
                   style={{ transitionDelay: `${index * 200}ms` }}
                 >
                   <div className="text-center">
-                    <div
-                      className={`inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br ${leader.gradient} mb-6 group-hover:scale-110 transition-transform duration-300`}
-                    >
-                      <UserCircle className="w-12 h-12 text-white" />
+                    {/* Image */}
+                    <div className="relative w-52 h-52 mx-auto mb-6">
+                      <img
+                        src={leader.image}
+                        alt={leader.name}
+                        className="w-52 h-52 object-cover rounded-full border-4 border-white shadow-lg group-hover:scale-105 transition-transform duration-300"
+                      />
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+
+                    {/* Name */}
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">
                       {leader.name}
                     </h3>
-                    <p className="text-gray-700 font-medium mb-4">
+
+                    {/* Role */}
+                    <p className="text-gray-600 font-medium mb-4">
                       {leader.role}
                     </p>
-                    <div
-                      className={`w-16 h-1 bg-gradient-to-r ${leader.gradient} mx-auto rounded-full`}
-                    ></div>
+
+                    {/* Bottom Accent Line */}
+                    <div className="w-16 h-1 bg-slate-700 mx-auto rounded-full"></div>
                   </div>
                 </div>
               ))}
@@ -311,141 +329,136 @@ const About = () => {
         </div>
       </section>
 
-     {/* Core Values – Animated & Professional */}
-<section className="py-10 text-gray-900">
-  <div className="max-w-7xl mx-auto px-6">
-    {/* Header */}
-    <div
-      className="max-w-4xl mx-auto text-center mb-20
+      {/* Core Values – Animated & Professional */}
+      <section className="py-10 text-gray-900">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Header */}
+          <div
+            className="max-w-4xl mx-auto text-center mb-20
       opacity-0 translate-y-8 animate-[fadeUp_0.8s_ease-out_forwards]"
-    >
-      <h2 className="text-4xl md:text-5xl font-bold mb-4">
-        Our Core Values
-      </h2>
-      <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto mb-6 rounded-full"></div>
-      <p className="text-gray-600 text-lg md:text-xl">
-        The principles that define how we operate, partner, and deliver value.
-      </p>
-    </div>
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              Our Core Values
+            </h2>
+            <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-blue-700 mx-auto mb-6 rounded-full"></div>
+            <p className="text-gray-600 text-lg md:text-xl">
+              The principles that define how we operate, partner, and deliver
+              value.
+            </p>
+          </div>
 
-    {/* Values Grid */}
-    <div className="grid md:grid-cols-2 gap-x-20 gap-y-14">
-      {values.map((value, index) => (
-        <div
-          key={index}
-          className="group flex gap-6 items-start
+          {/* Values Grid */}
+          <div className="grid md:grid-cols-2 gap-x-20 gap-y-14">
+            {values.map((value, index) => (
+              <div
+                key={index}
+                className="group flex gap-6 items-start
           opacity-0 translate-y-6
           animate-[fadeUp_0.8s_ease-out_forwards]
           hover:translate-y-[-4px] transition-all duration-300"
-          style={{ animationDelay: `${index * 120}ms` }}
-        >
-          {/* Icon */}
-          <div
-            className="w-16 h-12 flex items-center justify-center rounded-xl
+                style={{ animationDelay: `${index * 120}ms` }}
+              >
+                {/* Icon */}
+                <div
+                  className="w-16 h-12 flex items-center justify-center rounded-xl
             bg-slate-100 group-hover:bg-slate-500 transition-colors duration-300"
-          >
-            <div className="text-slate-600 w-8 h-8 group-hover:text-white transition-colors duration-300">
-              {value.icon}
-            </div>
-          </div>
+                >
+                  <div className="text-slate-600 w-8 h-8 group-hover:text-white transition-colors duration-300">
+                    {value.icon}
+                  </div>
+                </div>
 
-          {/* Text */}
-          <div>
-            <h3 className="text-xl font-semibold mb-2">
-              {value.title}
-            </h3>
-            <p className="text-gray-600 leading-relaxed">
-              {value.description}
-            </p>
+                {/* Text */}
+                <div>
+                  <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
+                  <p className="text-gray-600 leading-relaxed">
+                    {value.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
-
-     {/* Mission & Vision – Premium Animated */}
-<section className="py-24 relative">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid lg:grid-cols-2 gap-20 items-center">
-
-      {/* Left Content */}
-      <div
-        className="opacity-0 translate-y-10
-        animate-[fadeUp_0.9s_ease-out_forwards]"
-      >
-        <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-gray-900">
-          Our Mission & Vision
-        </h2>
-
-        <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-12">
-          We exist to simplify global trade while empowering businesses to
-          expand confidently into international markets.
-        </p>
-
-        <div className="space-y-10">
-          {/* Mission */}
-          <div className="flex gap-6 group">
+      {/* Mission & Vision – Premium Animated */}
+      <section className="py-24 relative">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-20 items-center">
+            {/* Left Content */}
             <div
-              className="w-14 h-14 rounded-xl bg-slate-100
+              className="opacity-0 translate-y-10
+        animate-[fadeUp_0.9s_ease-out_forwards]"
+            >
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-8 text-gray-900">
+                Our Mission & Vision
+              </h2>
+
+              <p className="text-gray-600 text-lg md:text-xl leading-relaxed mb-12">
+                We exist to simplify global trade while empowering businesses to
+                expand confidently into international markets.
+              </p>
+
+              <div className="space-y-10">
+                {/* Mission */}
+                <div className="flex gap-6 group">
+                  <div
+                    className="w-14 h-14 rounded-xl bg-slate-100
               flex items-center justify-center
               "
-            >
-              <Target className="w-7 h-7 text-blue-900  transition-colors" />
-            </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-2">Our Mission</h3>
-              <p className="text-gray-700 leading-relaxed">
-                To deliver end-to-end export–import solutions with compliance,
-                transparency, and operational excellence.
-              </p>
-            </div>
-          </div>
+                  >
+                    <Target className="w-7 h-7 text-blue-900  transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">Our Mission</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      To deliver end-to-end export–import solutions with
+                      compliance, transparency, and operational excellence.
+                    </p>
+                  </div>
+                </div>
 
-          {/* Vision */}
-          <div className="flex gap-6 group">
-            <div
-              className="w-14 h-14 rounded-xl bg-slate-100
+                {/* Vision */}
+                <div className="flex gap-6 group">
+                  <div
+                    className="w-14 h-14 rounded-xl bg-slate-100
               flex items-center justify-center"
-            >
-              <Globe className="w-7 h-7 text-blue-900  transition-colors" />
+                  >
+                    <Globe className="w-7 h-7 text-blue-900  transition-colors" />
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold mb-2">Our Vision</h3>
+                    <p className="text-gray-700 leading-relaxed">
+                      To become India’s most trusted, technology-driven global
+                      trade partner.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-2">Our Vision</h3>
-              <p className="text-gray-700 leading-relaxed">
-                To become India’s most trusted, technology-driven global trade
-                partner.
-              </p>
+
+            {/* Right Visual Card */}
+            <div
+              className="relative opacity-0 translate-y-10
+        animate-[fadeUp_1s_ease-out_forwards]"
+              style={{ animationDelay: "200ms" }}
+            >
+              <div
+                className="rounded-3xl bg-slate-700 text-white p-12 shadow-2xl
+          hover:-translate-y-2 transition-all duration-500"
+              >
+                <h4 className="text-3xl font-bold mb-6">
+                  Built for Long-Term Partnerships
+                </h4>
+                <p className="text-gray-300 text-lg leading-relaxed">
+                  We don’t just move shipments — we build reliable global trade
+                  ecosystems backed by expertise, compliance, and trust.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Right Visual Card */}
-      <div
-        className="relative opacity-0 translate-y-10
-        animate-[fadeUp_1s_ease-out_forwards]"
-        style={{ animationDelay: "200ms" }}
-      >
-        <div
-          className="rounded-3xl bg-slate-700 text-white p-12 shadow-2xl
-          hover:-translate-y-2 transition-all duration-500"
-        >
-          <h4 className="text-3xl font-bold mb-6">
-            Built for Long-Term Partnerships
-          </h4>
-          <p className="text-gray-300 text-lg leading-relaxed">
-            We don’t just move shipments — we build reliable global trade
-            ecosystems backed by expertise, compliance, and trust.
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+      </section>
 
       {/* Enhanced Call to Action */}
       <section className="py-10 bg-gradient-to-br from-blue-50/30 to-black/10 text-gray-900 relative overflow-hidden">
@@ -458,9 +471,7 @@ const About = () => {
         <div className="container mx-auto px-6 text-center relative z-10">
           <div
             className={`max-w-6xl mx-auto transform transition-all duration-1000 ${
-              isVisible.cta
-                ? "translate-y-0 opacity-100"
-                : ""
+              isVisible.cta ? "translate-y-0 opacity-100" : ""
             }`}
             id="cta"
             data-animate
@@ -470,10 +481,10 @@ const About = () => {
               Ready to Expand Your Business Globally?
             </h2>
             <p className="text-lg md:text-xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
-              Partner with GBS Global Solutions Pvt. Ltd. to simplify your
-              export–import operations. From compliance and documentation to
-              logistics and shipment execution, we help you trade across borders
-              with confidence.
+              Partner with ABS Global Exim. to simplify your export–import
+              operations. From compliance and documentation to logistics and
+              shipment execution, we help you trade across borders with
+              confidence.
             </p>
 
             {/* CTA Buttons */}

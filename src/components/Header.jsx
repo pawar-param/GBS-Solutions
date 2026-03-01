@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AuthContext } from "../App";
-import logo from "../../public/Image/GBS-logo.png";
+import logo from "../../public/Image/ABS logo head.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -50,9 +50,13 @@ const Header = () => {
               {/* Logo Image */}
               <img
                 src={logo}
-                alt="GBS Global Solutions Logo"
-                className=" w-40 object-cover"
+                alt="ABS Global Exim Logo"
+                className=" w-20 object-cover"
               />
+          <span className="text-xl font-bold text-[#D4AF37]">
+  ABS Global Exim
+</span>
+
             </div>
           </Link>
 

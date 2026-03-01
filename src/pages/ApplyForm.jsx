@@ -339,7 +339,7 @@ const JobApplicationForm = () => {
               <span className="text-white">Build Your Career With</span>
               <br />
               <span className="bg-gradient-to-r from-orange-500 to-yellow-400 bg-clip-text text-transparent">
-                GBS Global Solutions
+                ABS Global Exim
               </span>
             </h1>
 
@@ -374,7 +374,7 @@ const JobApplicationForm = () => {
           <div className="hidden md:block absolute right-0 bottom-0 w-1/2 lg:w-2/5">
             <img
               src="/assets/career-illustration.png"
-              alt="Career at GBS Global Solutions"
+              alt="Career at ABS Global Exim"
               className="w-full h-auto object-contain"
             />
           </div>

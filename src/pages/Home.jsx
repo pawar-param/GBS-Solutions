@@ -213,7 +213,7 @@ const Home = () => {
               {/* Description */}
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
                 <strong className="text-white">
-                  GBS Global Solutions Pvt. Ltd.
+                  ABS Global Exim.
                 </strong>{" "}
                 provides end-to-end export–import, compliance, and global
                 sourcing solutions to help businesses expand internationally
@@ -230,7 +230,7 @@ const Home = () => {
                 </a>
 
                 <a
-                  href="https://wa.me/919881491347"
+                  href="https://wa.me/919175318983"
                   className="border border-slate-600 text-gray-200 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition"
                 >
                   Speak with a Trade Expert
@@ -261,7 +261,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div
             className={`transition-all duration-1000 ${
-              isVisible.stats
+              isVisible?.stats
                 ? "opacity-100 translate-y-0"
                 : "opacity-0 translate-y-8"
             }`}
@@ -275,16 +275,16 @@ const Home = () => {
                   className="text-center border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition"
                 >
                   <div className="text-blue-600 mb-4 flex justify-center">
-                    {achievement.icon}
+                    {achievement?.icon}
                   </div>
 
                   <div className="text-3xl md:text-4xl font-semibold text-gray-900 mb-2">
-                    {achievement.number}
-                    {achievement.suffix}
+                    {achievement?.number}
+                    {achievement?.suffix}
                   </div>
 
                   <div className="text-sm text-gray-600 font-medium">
-                    {achievement.label}
+                    {achievement?.label}
                   </div>
                 </div>
               ))}
@@ -298,7 +298,7 @@ const Home = () => {
         <div className="container mx-auto px-6">
           <div
             className={`transition-all duration-1000 ${
-              isVisible.services ? "opacity-100 translate-y-0" : ""
+              isVisible?.services ? "opacity-100 translate-y-0" : ""
             }`}
             data-animate
           >
@@ -322,15 +322,15 @@ const Home = () => {
                   className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition"
                 >
                   <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-blue-600/10 text-blue-600 mb-6">
-                    {service.icon}
+                    {service?.icon}
                   </div>
 
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                    {service.title}
+                    {service?.title}
                   </h3>
 
                   <p className="text-gray-600 leading-relaxed">
-                    {service.description}
+                    {service?.description}
                   </p>
                 </div>
               ))}
@@ -361,7 +361,7 @@ const Home = () => {
             {/* Header */}
             <div className="text-center mb-20 max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
-                Why Choose GBS Global Solutions?
+                Why Choose ABS Global Exim?
               </h2>
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
                 We help businesses navigate global trade with confidence through
@@ -431,7 +431,7 @@ const Home = () => {
                 Let’s Work Together
               </h2>
               <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Partner with GBS Global Solutions for expert export–import
+                Partner with ABS Global Exim for expert export–import
                 consulting, regulatory compliance, and end-to-end global trade
                 solutions.
               </p>
@@ -469,7 +469,7 @@ const Home = () => {
                       </div>
                       <div>
                         <p className="font-medium text-gray-900">Phone</p>
-                        <p className="text-gray-600 text-sm">+91 9881491347</p>
+                        <p className="text-gray-600 text-sm">+91 9175318983</p>
                       </div>
                     </div>
 
@@ -481,7 +481,7 @@ const Home = () => {
                       <div>
                         <p className="font-medium text-gray-900">Email</p>
                         <p className="text-gray-600 text-sm">
-                          info@gbsglobalsolutions.com
+                          info@absglobalexim.com
                         </p>
                       </div>
                     </div>

@@ -131,13 +131,13 @@ const Career = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-6">
                 Build Your Career With
                 <br />
-                <span className="text-blue-400">GBS Global Solutions</span>
+                <span className="text-blue-400">ABS Global Exim</span>
               </h1>
 
               {/* Description */}
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
                 <strong className="text-white">
-                  GBS Global Solutions Pvt. Ltd.
+                  ABS Global Exim.
                 </strong>{" "}
                 offers career opportunities through internships, real-world IT
                 projects, professional training, and industry-focused programs
@@ -520,20 +520,20 @@ const Career = () => {
                       <p className="text-slate-700 text-base font-medium">
                         To apply, please send your CV to{" "}
                         <a
-                          href="mailto:info@gbsglobalsolutions.com"
+                          href="mailto:info@absglobalexim.com"
                           className="text-blue-800 font-semibold hover:underline"
                         >
-                          info@gbsglobalsolutions.com
+                          info@absglobalexim.com
                         </a>
                       </p>
 
                       <p className="mt-2 text-slate-700 text-base font-medium">
                         or call us at{" "}
                         <a
-                          href="tel:+919881491347"
+                          href="tel:+919175318983"
                           className="text-blue-800 font-semibold hover:underline"
                         >
-                          +91 98814 91347
+                          +91 9175318983
                         </a>
                       </p>
                     </div>
