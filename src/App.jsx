@@ -14,6 +14,7 @@ import Career from "./pages/Career";
 import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import ApplyForm from "./pages/ApplyForm";
+import Products from "./pages/Product";
 
 // Components
 import AuthForm from "./components/AuthForm";
@@ -65,6 +66,7 @@ function App() {
               <Route path="/apply/:jobId" element={<ApplyForm />} />
               <Route path="/auth/*" element={<AuthForm />} />
               <Route path="/services" element={<Services />} />
+              <Route path="/products" element={<Products />} />
             </Routes>
           </main>
 

@@ -124,7 +124,7 @@ const Career = () => {
             <div className="lg:col-span-2 transition-all duration-1000 opacity-100 translate-y-0">
               {/* Trust Line */}
               <p className="text-sm tracking-wide uppercase text-blue-400 mb-4">
-                Careers at GBS
+                Careers at ABS
               </p>
 
               {/* Heading */}
@@ -166,7 +166,7 @@ const Career = () => {
             {/* RIGHT CONTENT – 1 COLUMN */}
             <div className="hidden lg:block">
               <div className="bg-slate-700 border border-slate-800 rounded-2xl p-10 shadow-xl">
-                <h3 className="text-lg font-medium mb-6">Why Join GBS?</h3>
+                <h3 className="text-lg font-medium mb-6">Why Join ABS?</h3>
 
                 <ul className="space-y-4 text-gray-300 text-sm">
                   <li>• Real-World Industry Projects</li>

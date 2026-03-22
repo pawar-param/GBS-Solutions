@@ -13,6 +13,7 @@ const Header = () => {
   const navItems = [
     { name: "Home", path: "/" },
     { name: "Services", path: "/services" },
+    { name: "Products", path: "/products" },
     { name: "About", path: "/about" },
     { name: "Career", path: "/career" },
     { name: "Contact", path: "/contact" },
@@ -53,10 +54,9 @@ const Header = () => {
                 alt="ABS Global Exim Logo"
                 className=" w-20 object-cover"
               />
-          <span className="text-xl font-bold text-[#D4AF37]">
-  ABS Global Exim
-</span>
-
+              <span className="text-xl font-bold text-[#D4AF37]">
+                ABS Global Exim
+              </span>
             </div>
           </Link>
 

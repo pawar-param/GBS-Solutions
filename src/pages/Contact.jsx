@@ -500,7 +500,7 @@ const Contact = () => {
               <div className="space-y-8">
                 {/* Why Choose Us */}
                 <div className="bg-gradient-to-r from-blue-100 to-slate-200 rounded-3xl p-8 text-slate-900 shadow-lg border border-slate-300">
-                  <h3 className="text-2xl font-bold mb-4">Why Choose GBS?</h3>
+                  <h3 className="text-2xl font-bold mb-4">Why Choose ABS?</h3>
                   <ul className="space-y-3">
                     {[
                       "End-to-end EXIM solutions",
