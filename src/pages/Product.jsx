@@ -152,39 +152,33 @@ const categories = [
       },
       {
         name: "Industrial Fasteners",
-        image: "/images/products/industrial-fasteners.png",
+        image: "/Image/products/industrial-fasteners.png",
         description:
           "High-quality industrial fasteners including nuts, bolts, threaded inserts, spacers and other fastening components used in machinery assembly.",
       },
       {
         name: "Jack Screw Nut",
-        image: "/images/products/jack-screw-nut.jpg",
+        image: "/Image/products/jack-screw-nut.png",
         description:
           "Precision threaded nut used with jack screw rods for lifting and linear motion mechanisms.",
       },
       {
         name: "Machined Components",
-        image: "/images/products/machined-components.jpg",
+        image: "/Image/products/machined-components.png",
         description:
           "Custom CNC machined components manufactured as per drawing and specifications with high precision and finishing.",
       },
       {
         name: "Moulding Inserts",
-        image: "/images/products/moulding-inserts.jpg",
+        image: "/Image/products/moulding-inserts.png",
         description:
           "Metal threaded inserts used in plastic injection moulding to provide strong threads inside plastic components.",
       },
       {
-        name: "Spacer Nut (Without Internal Threads)",
-        image: "/images/products/spacer-nut-no-threads.jpg",
+        name: "Spacer Nut ",
+        image: "/Image/products/spacer-nut-no-threads.png",
         description:
           "Spacer nut used for maintaining gap or spacing between components without internal threading.",
-      },
-      {
-        name: "Spacer Nut for 1.5 Ton Capacity Jack",
-        image: "/images/products/spacer-nut-1.5-ton.jpg",
-        description:
-          "Spacer nut specially designed for 1.5 ton scissor jack assembly and lifting mechanism support.",
       },
     ],
   },
@@ -194,43 +188,43 @@ const categories = [
     items: [
       {
         name: "Conveyor Idler Roller Set (Dia 89mm to 219mm, Length 150mm to 2400mm)",
-        image: "/images/products/conveyor-idler-roller.jpg",
+        image: "/Image/products/conveyor-idler-roller.png",
         description:
           "Conveyor Idler Roller Sets are used to support and guide conveyor belts for smooth material handling operations. These rollers reduce friction, support belt load, and ensure efficient conveyor performance in industrial environments.",
       },
       {
         name: "Conveyor Impact Roller Set (Rubber Ring Cushioning, Heavy Duty Frame)",
-        image: "/images/products/conveyor-impact-roller.jpg",
+        image: "/Image/products/conveyor-impact-roller.png",
         description:
           "Impact Rollers are designed with rubber rings to absorb shock and impact at conveyor loading points, protecting the belt from damage and increasing conveyor system life.",
       },
       {
         name: "Guide Rollers (Vertical/Horizontal Rubber Coated)",
-        image: "/images/products/guide-rollers.jpg",
+        image: "/Image/products/guide-rollers.jpeg",
         description:
           "Conveyor guide rollers (side rollers) keep the conveyor belt aligned with the conveyor frame.",
       },
       {
         name: "Conveyor Rollers (Various Diameters, Painted/Galvanized)",
-        image: "/images/products/conveyor-rollers.jpg",
+        image: "/Image/products/conveyor-rollers.png",
         description:
           "Standard conveyor return and carry rollers for bulk material handling across industries.",
       },
       {
         name: "Drum Roller (Rubber Lagged, Welded Construction)",
-        image: "/images/products/drum-roller.jpg",
+        image: "/Image/products/drum-roller.jpeg",
         description:
           "Drum Rollers are used in conveyor systems to drive or guide conveyor belts. They are available as drive drums, tail drums, and bend drums.",
       },
       {
         name: "Conveyor Belts (EP Fabric, Rubber Grade AA/A/B)",
-        image: "/images/products/conveyor-belts.jpg",
+        image: "/Image/products/conveyor-belts.png",
         description:
           "Conveyor Belts are used for transporting materials from one location to another in industrial and material handling systems.",
       },
       {
         name: "Rubber U-Bidding (Natural/SBR Rubber, Custom Lengths)",
-        image: "/images/products/rubber-u-bidding.jpg",
+        image: "/Image/products/rubber-u-bidding.png",
         description:
           "Rubber U-Bidding is used for edge protection, sealing, and vibration protection in industrial machines and metal sheets. It prevents damage from sharp edges and reduces vibration noise.",
       },
@@ -242,37 +236,37 @@ const categories = [
     items: [
       {
         name: "Jaw Plates (High Manganese Steel, Various Sizes Available)",
-        image: "/images/products/jaw-plates.jpg",
+        image: "/Image/products/jaw-plates.jpeg",
         description:
           "Jaw Plates are wear parts used in jaw crushers for crushing stones and minerals. Made from high manganese steel for long wear life and high crushing strength.",
       },
-      {
-        name: "Toggle Plate (Cast Iron / Steel, Safety Design)",
-        image: "/images/products/toggle-plate.jpg",
-        description:
-          "Toggle Plate is a safety and support component in jaw crushers that helps transfer crushing force and protects the crusher from overload.",
-      },
+      // {
+      //   name: "Toggle Plate (Cast Iron / Steel, Safety Design)",
+      //   image: "/Image/products/toggle-plate.png",
+      //   description:
+      //     "Toggle Plate is a safety and support component in jaw crushers that helps transfer crushing force and protects the crusher from overload.",
+      // },
       {
         name: "Crusher Bolts (High Tensile Steel, Custom Available)",
-        image: "/images/products/crusher-bolts.jpg",
+        image: "/Image/products/crusher-bolts.png",
         description:
           "Crusher Bolts are high tensile fasteners used in crusher machines for fixing jaw plates, liners, and other crusher parts.",
       },
       {
         name: "Crusher Bearings (Custom Available, Heavy Duty Grade)",
-        image: "/images/products/crusher-bearings.jpg",
+        image: "/Image/products/crusher-bearings.png",
         description:
           "Crusher Bearings are heavy-duty bearings used in crushers to handle high load, shock load, and vibration during crushing operations.",
       },
       {
         name: "Industrial Gearbox (Heavy Duty Construction, All Ratios)",
-        image: "/images/products/industrial-gearbox.jpg",
+        image: "/Image/products/industrial-gearbox.png",
         description:
           "Industrial Gearboxes are used to reduce speed and increase torque in industrial machinery and conveyor systems.",
       },
       {
         name: "Heavy Springs (Custom Dimensions, High Load Capacity)",
-        image: "/images/products/heavy-springs.jpg",
+        image: "/Image/products/heavy-springs.png",
         description:
           "Heavy Duty Springs are used in vibrating screens and industrial machines to absorb shock and vibration.",
       },
@@ -284,37 +278,37 @@ const categories = [
     items: [
       {
         name: "Wiremesh Screens (Square/Rectangular Opening, Mild Steel/SS/Manganese)",
-        image: "/images/products/wiremesh-screens.jpg",
+        image: "/Image/products/wiremesh-screens.png",
         description:
           "Wiremesh is used for screening, filtering, and separating materials in industrial processes. It is available in different mesh sizes, materials, and thicknesses depending on application requirements.",
       },
       {
         name: "Vibrating Screen Machine & Spares (Linear/Circular Motion, 1-4 Deck Options)",
-        image: "/images/products/vibrating-screen-machine.jpg",
+        image: "/Image/products/vibrating-screen-machine.png",
         description:
           "Vibrating Screen Machines are used for separating materials by size using vibration. Spares include screen mesh, springs, bearings, shafts, and motors used for maintenance and replacement.",
       },
       {
         name: "Bearing Housing (Cast Steel Construction, All Size Options)",
-        image: "/images/products/bearing-housing.jpg",
+        image: "/Image/products/bearing-housing.png",
         description:
           "Bearing Housing supports bearings and protects them from dust, dirt, and moisture. It ensures proper alignment and smooth rotation of shafts.",
       },
       {
         name: "Vibro Motor (0.1kW to 15kW, IP65 Protection)",
-        image: "/images/products/vibro-motor.jpg",
+        image: "/Image/products/vibro-motor.png",
         description:
           "Vibro Motors generate vibration for material movement, screening, and compaction in industrial equipment.",
       },
-      {
-        name: "Vibrating Screen Shaft (Eccentric, Alloy Steel, Heat Treated)",
-        image: "/images/products/vibrating-screen-shaft.jpg",
-        description:
-          "Eccentric Vibrator Shafts are used in vibrating screens to generate vibration for material screening and separation.",
-      },
+      // {
+      //   name: "Vibrating Screen Shaft (Eccentric, Alloy Steel, Heat Treated)",
+      //   image: "/Image/products/vibrating-screen-shaft.png",
+      //   description:
+      //     "Eccentric Vibrator Shafts are used in vibrating screens to generate vibration for material screening and separation.",
+      // },
       {
         name: "C-Clamp for Vibrator",
-        image: "/images/products/c-clamp-vibrator.jpg",
+        image: "/Image/products/c-clamp-vibrator.png",
         description:
           "C-Clamps are used to mount vibro motors on vibrating screens and industrial vibrating equipment securely.",
       },
@@ -326,145 +320,145 @@ const categories = [
     items: [
       {
         name: "Perforated Sheets (MS/SS/Aluminum, Round/Square/Slotted Holes)",
-        image: "/images/products/perforated-sheets.jpg",
+        image: "/Image/products/perforated-sheets.png",
         description:
           "Perforated Sheets are metal sheets with punched holes used for screening, filtration, ventilation, and protective covers.",
       },
       {
         name: "Industrial Motors (IE2/IE3 Efficiency, 0.37kW to 355kW)",
-        image: "/images/products/industrial-motors.jpg",
+        image: "/Image/products/industrial-motors.jpeg",
         description:
           "Industrial Electric Motors are used to drive industrial machines, conveyors, pumps, and mechanical equipment.",
       },
       {
         name: "Toggle Bearings (Cast Steel, Self Lubricating Option)",
-        image: "/images/products/toggle-bearings.jpg",
+        image: "/Image/products/pillow-block-bearing.png",
         description:
           "Toggle Bearings are used in jaw crushers to support toggle plates and maintain smooth movement during crushing operations.",
       },
       {
         name: "Pillow Block Bearing (UCF/UCP Series, All Bore Sizes)",
-        image: "/images/products/pillow-block-bearing.jpg",
+        image: "/Image/products/pillow-block-bearing.png",
         description:
           "Pillow Block Bearings are mounted bearings used to support rotating shafts with easy installation and maintenance.",
       },
       {
         name: "Pedestal Bearing (Split Housing Design, Heavy Duty Grade)",
-        image: "/images/products/pedestal-bearing.jpg",
+        image: "/Image/products/pedestal-bearing.png",
         description:
           "Pedestal Bearings are used to support rotating shafts and are designed for heavy load industrial applications.",
       },
-      {
-        name: "T-Bolts (High Strength Steel, Rubber Sealed)",
-        image: "/images/products/t-bolts.jpg",
-        description:
-          "Anti-vibration clamping bolts for securing screen mesh panels on vibrating screens.",
-      },
+      // {
+      //   name: "T-Bolts (High Strength Steel, Rubber Sealed)",
+      //   image: "/Image/products/t-bolts.png",
+      //   description:
+      //     "Anti-vibration clamping bolts for securing screen mesh panels on vibrating screens.",
+      // },
     ],
   },
   {
     title: "Home Decor & Handicrafts",
     icon: <Package />,
     items: [
-      {
-        name: "Tray (Custom Size)",
-        image: "/images/products/tray.jpg",
-        description:
-          "Decorative wooden or metal serving trays with handmade finishing.",
-      },
+      // {
+      //   name: "Tray (Custom Size)",
+      //   image: "/Image/products/tray.png",
+      //   description:
+      //     "Decorative wooden or metal serving trays with handmade finishing.",
+      // },
       {
         name: "Cushion Covers (12x12 / 16x16 / 18x18, Custom Size)",
-        image: "/images/products/cushion-covers.jpg",
+        image: "/Image/products/cushion-covers.png",
         description:
           "Cotton or embroidered cushion covers with traditional designs.",
       },
-      {
-        name: "Table Runner with Mat (Custom Size)",
-        image: "/images/products/table-runner.jpg",
-        description:
-          "Decorative fabric table runners with block print or embroidery.",
-      },
+      // {
+      //   name: "Table Runner with Mat (Custom Size)",
+      //   image: "/Image/products/table-runner.png",
+      //   description:
+      //     "Decorative fabric table runners with block print or embroidery.",
+      // },
       {
         name: "Handbags, Laptop Bags & Tote Bags (Custom Size)",
-        image: "/images/products/handbags-totes.jpg",
+        image: "/Image/products/handbags-totes.jpeg",
         description: "Reusable cotton/jute tote bags for shopping and gifting.",
       },
       {
         name: "Bed Covers (Custom Size)",
-        image: "/images/products/bed-covers.jpg",
+        image: "/Image/products/bed-covers.jpg",
         description: "Cotton printed or embroidered bed covers for home décor.",
       },
       {
         name: "Toran & Rangoli (Standard)",
-        image: "/images/products/toran-rangoli.jpg",
+        image: "/Image/products/toran-rangoli.jpg",
         description:
           "Traditional decorative door hangings used in Indian festivals.",
       },
       {
         name: "Diyas (Custom Size)",
-        image: "/images/products/diyas.jpg",
+        image: "/Image/products/diyas.jpeg",
         description:
           "Clay or decorative diya lamps used for festivals like Diwali.",
       },
       {
         name: "Hangings (Custom Size)",
-        image: "/images/products/hangings.jpg",
+        image: "/Image/products/hangings.jpeg",
         description:
           "Handmade decorative wall hangings made from fabric, beads, or wood.",
       },
       {
         name: "Saree Tassels Design (Custom Size)",
-        image: "/images/products/saree-tassels.jpg",
+        image: "/Image/products/saree-tassels.jpeg",
         description:
           "Decorative tassels used in curtains, bags, and home décor.",
       },
-      {
-        name: "Cotton & Silk Clutcher (Standard)",
-        image: "/images/products/clutcher.jpg",
-        description: "Handmade purses with embroidery or fabric designs.",
-      },
+      // {
+      //   name: "Cotton & Silk Clutcher (Standard)",
+      //   image: "/Image/products/clutcher.png",
+      //   description: "Handmade purses with embroidery or fabric designs.",
+      // },
       {
         name: "Potlis (Custom Size)",
-        image: "/images/products/potlis.jpg",
+        image: "/Image/products/Potlis.jpeg",
         description:
           "Traditional drawstring gift bags used for weddings and festivals.",
       },
       {
         name: "Diaries (Standard)",
-        image: "/images/products/diaries.jpg",
+        image: "/Image/products/diaries.jpeg",
         description: "Handmade paper diaries with decorative covers.",
       },
       {
         name: "Diwali Products (Custom Size)",
-        image: "/images/products/diwali-products.jpg",
+        image: "/Image/products/diwali-products.jpeg",
         description:
           "Decorative festive items including diyas, torans, and decor sets.",
       },
-      {
-        name: "Table Cloth (Custom Size)",
-        image: "/images/products/table-cloth.jpg",
-        description: "Printed or embroidered table cloths.",
-      },
+      // {
+      //   name: "Table Cloth (Custom Size)",
+      //   image: "/Image/products/table-cloth.png",
+      //   description: "Printed or embroidered table cloths.",
+      // },
       {
         name: "Hand-Painted Furniture (Standard)",
-        image: "/images/products/hand-painted-furniture.jpg",
+        image: "/Image/products/hand-painted-furniture.jpg",
         description: "Wooden furniture with traditional hand-painted artwork.",
       },
-      {
-        name: "Wooden Artifacts (Custom Size)",
-        image: "/images/products/wooden-artifacts.jpg",
-        description:
-          "Hand-carved wooden mirror frames and decorative pieces for home.",
-      },
+      // {
+      //   name: "Wooden Artifacts (Custom Size)",
+      //   image: "/Image/products/wooden-artifacts.png",
+      //   description:
+      //     "Hand-carved wooden mirror frames and decorative pieces for home.",
+      // },
       {
         name: "Jute Products",
-        image: "/images/products/jute-products.jpg",
+        image: "/Image/products/jute-products.jpeg",
         description:
           "Stylish handmade handbags made with fabric, jute, or leather.",
       },
       {
         name: "Set of 3 Pouches",
-        image: "/images/products/set-of-3-pouches.jpg",
+        image: "/Image/products/set-of-3-pouches.jpeg",
         description:
           "Set of 3 multi-purpose pouches in different sizes for better organization. Lightweight, durable, and travel-friendly.",
       },
@@ -631,7 +625,7 @@ const Products = () => {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-32 h-32 object-cover rounded-lg mb-3"
+                        className="w-52 h-48 object-cover rounded-lg mb-3"
                       />
                     ) : (
                       <div className="w-32 h-32 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 mb-3">

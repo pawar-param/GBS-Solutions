@@ -354,7 +354,7 @@ const Home = () => {
               <div
                 key={index}
                 className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition cursor-pointer"
-                onClick={() => navigate(`/products/${product.title}`)}
+                onClick={() => navigate(`/products`)}
               >
                 <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-green-600/10 text-green-600 mb-4">
                   {product.icon}
@@ -399,7 +399,8 @@ const Home = () => {
               {services.map((service, index) => (
                 <div
                   key={index}
-                  className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition"
+                  className="bg-white border border-gray-200 rounded-2xl cursor-pointer p-8 hover:shadow-xl transition"
+                  onClick={() => navigate(`/services`)}
                 >
                   <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-blue-600/10 text-blue-600 mb-6">
                     {service?.icon}
