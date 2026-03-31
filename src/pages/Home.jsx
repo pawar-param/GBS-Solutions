@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Users,
   Award,
@@ -15,6 +16,11 @@ import {
   Ship,
   Truck,
   Map,
+  Cog,
+  Factory,
+  Settings,
+  Car,
+  Package,
   GraduationCap,
   TrendingUp,
   ShieldCheck,
@@ -30,6 +36,7 @@ const Home = () => {
     satisfaction: 0,
     experience: 0,
   });
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -43,7 +50,7 @@ const Home = () => {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
 
     const sections = document.querySelectorAll("[data-animate]");
@@ -71,16 +78,16 @@ const Home = () => {
       };
 
       animateValue(0, 500, 2000, (val) =>
-        setStats((prev) => ({ ...prev, placements: val }))
+        setStats((prev) => ({ ...prev, placements: val })),
       );
       animateValue(0, 150, 2000, (val) =>
-        setStats((prev) => ({ ...prev, clients: val }))
+        setStats((prev) => ({ ...prev, clients: val })),
       );
       animateValue(0, 95, 2000, (val) =>
-        setStats((prev) => ({ ...prev, satisfaction: val }))
+        setStats((prev) => ({ ...prev, satisfaction: val })),
       );
       animateValue(0, 5, 2000, (val) =>
-        setStats((prev) => ({ ...prev, experience: val }))
+        setStats((prev) => ({ ...prev, experience: val })),
       );
     }
   }, [isVisible.stats]);
@@ -185,6 +192,45 @@ const Home = () => {
     },
   ];
 
+  const products = [
+    {
+      title: "Industrial Components",
+      icon: <Cog />,
+      description:
+        "High-quality industrial components including motors, bearings, sheets, and fasteners for various applications.",
+    },
+    {
+      title: "Conveyor components",
+      icon: <Factory />,
+      description:
+        "Complete range of conveyor rollers, belts, and impact rollers designed for smooth material handling.",
+    },
+    {
+      title: "Crusher Spare Parts",
+      icon: <Factory />,
+      description:
+        "Durable crusher spare parts such as jaw plates, bolts, bearings, and gearboxes for heavy-duty operations.",
+    },
+    {
+      title: "Vibrating Screen",
+      icon: <Settings />,
+      description:
+        "Efficient vibrating screens, wiremesh, vibro motors, and accessories for industrial screening solutions.",
+    },
+    {
+      title: "Scissor Jack Screw Rods & Nuts",
+      icon: <Car />,
+      description:
+        "Reliable screw rods, nuts, and machined components for scissor jacks with different load capacities.",
+    },
+    {
+      title: "Home Decor & Handicrafts",
+      icon: <Package />,
+      description:
+        "Beautiful handmade products including trays, cushion covers, bags, torans, and decorative items.",
+    },
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50 overflow-hidden scroll-smooth">
       {/* Hero Section with Advanced Animation */}
@@ -212,9 +258,7 @@ const Home = () => {
 
               {/* Description */}
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
-                <strong className="text-white">
-                  ABS Global Exim.
-                </strong>{" "}
+                <strong className="text-white">ABS Global Exim.</strong>{" "}
                 provides end-to-end export–import, compliance, and global
                 sourcing solutions to help businesses expand internationally
                 with confidence, transparency, and regulatory clarity.
@@ -289,6 +333,42 @@ const Home = () => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="products" className="py-10 bg-slate-50">
+        <div className="container mx-auto px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6">
+              Our Products
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              Explore our range of export-import products and solutions tailored
+              to your business needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-8xl mx-auto">
+            {products.map((product, index) => (
+              <div
+                key={index}
+                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition cursor-pointer"
+                onClick={() => navigate(`/products/${product.title}`)}
+              >
+                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-green-600/10 text-green-600 mb-4">
+                  {product.icon}
+                </div>
+
+                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  {product.title}
+                </h3>
+
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {product.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

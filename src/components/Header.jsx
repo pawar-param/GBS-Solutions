@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { AuthContext } from "../App";
-import logo from "../../public/Image/ABS logo head.png";
+import logo from "../../public/Image/abslogo1.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,9 +12,9 @@ const Header = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Products", path: "/products" },
     { name: "About", path: "/about" },
+    { name: "Products", path: "/products" },
+    { name: "Services", path: "/services" },
     { name: "Career", path: "/career" },
     { name: "Contact", path: "/contact" },
   ];
@@ -54,9 +54,6 @@ const Header = () => {
                 alt="ABS Global Exim Logo"
                 className=" w-20 object-cover"
               />
-              <span className="text-xl font-bold text-[#D4AF37]">
-                ABS Global Exim
-              </span>
             </div>
           </Link>
 

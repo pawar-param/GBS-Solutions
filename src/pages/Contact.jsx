@@ -28,6 +28,7 @@ const Contact = () => {
     email: "",
     company: "",
     phone: "",
+    serviceType: "",
     subject: "",
     message: "",
   });
@@ -60,6 +61,7 @@ const Contact = () => {
     setFormData((prev) => ({
       ...prev,
       [name]: value,
+      ...(name === "serviceType" ? { subject: "" } : {}),
     }));
   };
   const navigate = useNavigate();
@@ -77,6 +79,8 @@ const Contact = () => {
       email: formData.email,
       company: formData.company,
       phone: formData.phone,
+
+      serviceType: formData.serviceType,
       subject: formData.subject,
       message: formData.message,
     };
@@ -97,6 +101,7 @@ const Contact = () => {
         email: "",
         company: "",
         phone: "",
+        serviceType: "",
         subject: "",
         message: "",
       });
@@ -140,14 +145,23 @@ const Contact = () => {
     },
   ];
 
-  const services = [
-    "Export & Import Services",
-    "Trade Documentation & Compliance",
-    "Global Sourcing & Market Research",
-    "Logistics & Customs Coordination",
-    "Consulting & Advisory",
-    "Training & Capacity Building",
-  ];
+  const services = {
+    Product: [
+      "Export & Import Services",
+      "Trade Documentation & Compliance",
+      "Global Sourcing & Market Research",
+      "Logistics & Customs Coordination",
+      "Consulting & Advisory",
+      "Training & Capacity Building",
+    ],
+    Service: [
+      "Trade Documentation & Compliance",
+      "Global Sourcing & Market Research",
+      "Logistics & Customs Coordination",
+      "Consulting & Advisory",
+      "Training & Capacity Building",
+    ],
+  };
 
   const socialLinks = [
     {
@@ -422,25 +436,50 @@ const Contact = () => {
                     </div>
 
                     {/* Subject */}
-                    <div>
-                      <label className="block text-sm font-semibold text-slate-900 mb-2">
-                        Subject
-                      </label>
-                      <select
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        className="w-full px-4 py-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                        required
-                      >
-                        <option value="">Select a service</option>
-                        {services.map((service, index) => (
-                          <option key={index} value={service}>
-                            {service}
-                          </option>
-                        ))}
-                        <option value="general">General Inquiry</option>
-                      </select>
+                    <div className="space-y-4">
+                      {/* First Dropdown: Service Type */}
+                      <div>
+                        <label className="block text-sm font-semibold text-slate-900 mb-2">
+                          Service Type
+                        </label>
+                        <select
+                          name="serviceType"
+                          value={formData.serviceType}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                          required
+                        >
+                          <option value="">Select type</option>
+                          <option value="Product">Product</option>
+                          <option value="Service">Service</option>
+                        </select>
+                      </div>
+
+                      {/* Second Dropdown: Subject */}
+                      <div>
+                        <label className="block text-sm font-semibold text-slate-900 mb-2">
+                          Subject
+                        </label>
+                        <select
+                          name="subject"
+                          value={formData.subject}
+                          onChange={handleInputChange}
+                          className="w-full px-4 py-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                          required
+                          disabled={!formData.serviceType} // Disable until type is selected
+                        >
+                          <option value="">Select a service</option>
+                          {formData.serviceType &&
+                            services[formData.serviceType].map(
+                              (service, index) => (
+                                <option key={index} value={service}>
+                                  {service}
+                                </option>
+                              ),
+                            )}
+                          <option value="general">General Inquiry</option>
+                        </select>
+                      </div>
                     </div>
 
                     {/* Message */}
@@ -467,7 +506,7 @@ const Contact = () => {
                       type="submit"
                       onClick={handleSubmit}
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-blue-900 to-blue-900 text-white py-4 px-8 rounded-xl font-semibold hover:from-blue-600 hover:to-slate-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
+                      className="w-full bg-gradient-to-r cursor-pointer from-blue-900 to-blue-900 text-white py-4 px-8 rounded-xl font-semibold hover:from-blue-600 hover:to-slate-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center"
                     >
                       {isSubmitting ? (
                         <>
@@ -524,11 +563,13 @@ const Contact = () => {
                   </h3>
 
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-                    {services.map((service, index) => (
-                      <button
-                        key={index}
-                        onClick={goToServices}
-                        className="
+                    {Object.values(services)
+                      .flat()
+                      .map((service, index) => (
+                        <button
+                          key={index}
+                          onClick={goToServices}
+                          className="
           text-left
           bg-gradient-to-r from-blue-50 to-slate-100
           px-3 py-2 rounded-lg
@@ -539,12 +580,12 @@ const Contact = () => {
           cursor-pointer
           group
         "
-                      >
-                        <span className="text-blue-800 font-medium text-sm group-hover:underline">
-                          {service}
-                        </span>
-                      </button>
-                    ))}
+                        >
+                          <span className="text-blue-800 font-medium text-sm group-hover:underline">
+                            {service}
+                          </span>
+                        </button>
+                      ))}
                   </div>
                 </div>
 

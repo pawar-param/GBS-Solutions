@@ -10,7 +10,7 @@ import {
   Instagram,
   ChevronUp,
 } from "lucide-react";
-import logo from "../../public/Image/ABS logo head.png";
+import logo from "../../public/Image/abslogo1.png";
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -19,9 +19,9 @@ const Footer = () => {
 
   const quickLinks = [
     { name: "Home", path: "/" },
-    { name: "Services", path: "/services" },
-    { name: "Products", path: "/products" },
     { name: "About", path: "/about" },
+    { name: "Products", path: "/products" },
+    { name: "Services", path: "/services" },
     { name: "Career", path: "/career" },
     { name: "Contact", path: "/contact" },
   ];
@@ -78,9 +78,6 @@ const Footer = () => {
                 alt="ABS Global Exim Logo"
                 className=" w-25 object-cover"
               />
-              <span className="text-xl font-bold text-amber-100">
-                ABS Global Exim
-              </span>
             </div>
             <p className="text-gray-300 leading-relaxed max-w-md">
               ABS Global Exim. is a Pune-based export–import and global trade
