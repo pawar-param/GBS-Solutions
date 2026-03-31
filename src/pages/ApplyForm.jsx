@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   User,
   Mail,
@@ -51,7 +52,7 @@ const JobApplicationForm = () => {
             setIsVisible((prev) => ({ ...prev, [entry.target.id]: true }));
           }
         }),
-      { threshold: 0.1 }
+      { threshold: 0.1 },
     );
     document
       .querySelectorAll("[data-animate]")
@@ -182,7 +183,7 @@ const JobApplicationForm = () => {
       if (!response.ok) {
         if (response.status === 413) {
           setSubmitMessage(
-            "File too large for server. Please use a smaller file."
+            "File too large for server. Please use a smaller file.",
           );
           return;
         }
@@ -190,7 +191,7 @@ const JobApplicationForm = () => {
         const errorData = await response.json();
         setSubmitMessage(
           errorData.message ||
-            `Server error (${response.status}): Please try again.`
+            `Server error (${response.status}): Please try again.`,
         );
         return;
       }
@@ -201,7 +202,7 @@ const JobApplicationForm = () => {
       if (result.success) {
         // ✅ Success case
         setSubmitMessage(
-          "Application submitted successfully! We'll review your application and get back to you soon."
+          "Application submitted successfully! We'll review your application and get back to you soon.",
         );
         setFormData({
           name: "",
@@ -223,7 +224,7 @@ const JobApplicationForm = () => {
       } else {
         // ✅ Show backend-provided message (like "You already applied")
         setSubmitMessage(
-          result.message || "Something went wrong. Please try again."
+          result.message || "Something went wrong. Please try again.",
         );
       }
     } catch (error) {
@@ -231,11 +232,11 @@ const JobApplicationForm = () => {
 
       if (error.name === "TypeError" && error.message.includes("fetch")) {
         setSubmitMessage(
-          "Cannot connect to server. Please make sure the server is running on localhost:5000."
+          "Cannot connect to server. Please make sure the server is running on localhost:5000.",
         );
       } else {
         setSubmitMessage(
-          error.message || "Something went wrong. Please try again."
+          error.message || "Something went wrong. Please try again.",
         );
       }
     } finally {
@@ -245,7 +246,7 @@ const JobApplicationForm = () => {
 
   const getProgressPercentage = () => {
     const filledFields = Object.entries(formData).filter(
-      ([key, value]) => value !== ""
+      ([key, value]) => value !== "",
     ).length;
     return Math.round((filledFields / Object.keys(formData).length) * 100);
   };
@@ -352,13 +353,13 @@ const JobApplicationForm = () => {
 
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mb-16">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-flex items-center justify-center bg-orange-500 text-white px-8 py-4 rounded-2xl font-semibold shadow-lg hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-1"
               >
                 Connect With Us
                 <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              </Link>
 
               <button
                 onClick={handleClick}

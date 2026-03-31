@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Phone,
   Mail,
@@ -224,12 +225,12 @@ const Contact = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="/services"
+                <Link
+                  to="/services"
                   className="border border-slate-600 text-gray-200 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition"
                 >
                   Explore Trade Services
-                </a>
+                </Link>
               </div>
             </div>
 

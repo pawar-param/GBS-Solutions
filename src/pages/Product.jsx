@@ -510,12 +510,12 @@ const Products = () => {
               Get Product Catalog
             </Link>
 
-            <a
-              href="/services"
+            <Link
+              to="/services"
               className="border border-gray-400 px-8 py-4 rounded-xl hover:border-blue-400"
             >
               View Export Services
-            </a>
+            </Link>
           </div>
         </div>
       </section>

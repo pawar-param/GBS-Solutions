@@ -136,12 +136,12 @@ const About = () => {
                   Partner With Us
                 </Link>
 
-                <a
-                  href="/services"
+                <Link
+                  to="/services"
                   className="border border-slate-600 text-gray-200 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition"
                 >
                   Explore Trade Services
-                </a>
+                </Link>
               </div>
             </div>
 
@@ -497,12 +497,12 @@ const About = () => {
                 Start Your Global Trade Journey
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
-              <a
-                href="/services"
+              <Link
+                to="/services"
                 className="group inline-flex items-center justify-center bg-transparent text-slate-500 px-8 py-4 rounded-2xl font-semibold border-2 border-slate-500 hover:bg-orange-50 hover:text-blue-600 transition-all duration-300"
               >
                 Explore Trade Services
-              </a>
+              </Link>
             </div>
           </div>
         </div>
