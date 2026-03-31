@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   Globe,
   FileText,
@@ -102,12 +103,12 @@ const Services = () => {
               international trade operations.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-xl font-medium transition"
               >
                 Speak with a Consultant
-              </a>
+              </Link>
               <a
                 href="https://wa.me/919175318983"
                 className="border border-slate-400 text-blue-100 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition"
@@ -204,8 +205,8 @@ const Services = () => {
                   to your business needs.
                 </p>
 
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="group inline-flex items-center justify-center w-full
               bg-slate-600 hover:bg-slate-700
               text-white px-8 py-4 rounded-xl font-medium
@@ -213,7 +214,7 @@ const Services = () => {
                 >
                   Speak to an Export–Import Consultant
                   <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </a>
+                </Link>
 
                 <p className="text-sm text-gray-500 text-center mt-4">
                   No obligation • Confidential consultation

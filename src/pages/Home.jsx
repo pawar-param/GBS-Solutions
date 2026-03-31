@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import {
   Users,
   Award,
@@ -266,12 +267,12 @@ const Home = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-xl font-medium transition"
                 >
                   Book a Free Consultation
-                </a>
+                </Link>
 
                 <a
                   href="https://wa.me/919175318983"
@@ -419,14 +420,14 @@ const Home = () => {
 
             {/* CTA */}
             <div className="text-center mt-16">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="inline-block border border-slate-600 text-gray-700
              hover:border-blue-600 hover:text-blue-600
              px-10 py-4 rounded-xl font-medium transition-all duration-300"
               >
                 Speak to an Export–Import Consultant
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -597,8 +598,8 @@ const Home = () => {
                     </p>
                   </div>
 
-                  <a
-                    href="/contact"
+                  <Link
+                    to="/contact"
                     className="group inline-flex items-center justify-center
              border border-slate-600 text-gray-700
              hover:border-blue-600 hover:text-blue-600
@@ -608,7 +609,7 @@ const Home = () => {
                   >
                     Speak with a Trade Consultant
                     <ArrowRight className="ml-2 h-5 w-5 transform transition-transform duration-300 group-hover:translate-x-1" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

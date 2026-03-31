@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import { ArrowRight, ChevronRight } from "lucide-react";
 
 const Career = () => {
@@ -136,10 +137,8 @@ const Career = () => {
 
               {/* Description */}
               <p className="text-gray-300 text-lg leading-relaxed max-w-2xl mb-10">
-                <strong className="text-white">
-                  ABS Global Exim.
-                </strong>{" "}
-                offers career opportunities through internships, real-world IT
+                <strong className="text-white">ABS Global Exim.</strong> offers
+                career opportunities through internships, real-world IT
                 projects, professional training, and industry-focused programs
                 designed to prepare you for long-term success in the global
                 technology ecosystem.
@@ -147,12 +146,12 @@ const Career = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-xl font-medium transition"
                 >
                   Connect With Us
-                </a>
+                </Link>
 
                 <a
                   href="#openings"

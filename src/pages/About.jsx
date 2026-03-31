@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import {
   Users,
   Target,
@@ -128,12 +129,12 @@ const About = () => {
 
               {/* CTA Buttons */}
               <div className="flex flex-wrap gap-4">
-                <a
-                  href="/contact"
+                <Link
+                  to="/contact"
                   className="bg-blue-800 hover:bg-blue-900 text-white px-8 py-4 rounded-xl font-medium transition"
                 >
                   Partner With Us
-                </a>
+                </Link>
 
                 <a
                   href="/services"
@@ -233,13 +234,13 @@ const About = () => {
                     execution.
                   </p>
                   <div className="flex items-center text-blue-300 hover:text-blue-400 transition-colors cursor-pointer font-medium">
-                    <a
-                      href="/contact"
+                    <Link
+                      to="/contact"
                       className="flex items-center text-blue-300 hover:text-blue-400 transition-colors duration-200 cursor-pointer font-medium"
                     >
                       <span className="mr-2">Partner With Us</span>
                       <ArrowRight className="h-5 w-5" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -489,13 +490,13 @@ const About = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a
-                href="/contact"
+              <Link
+                to="/contact"
                 className="group inline-flex items-center justify-center bg-slate-800 text-white px-8 py-4 rounded-2xl font-semibold hover:bg-slate-950 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
               >
                 Start Your Global Trade Journey
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
               <a
                 href="/services"
                 className="group inline-flex items-center justify-center bg-transparent text-slate-500 px-8 py-4 rounded-2xl font-semibold border-2 border-slate-500 hover:bg-orange-50 hover:text-blue-600 transition-all duration-300"

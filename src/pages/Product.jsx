@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import {
   Cog,
   Factory,
@@ -502,12 +503,12 @@ const Products = () => {
           </p>
 
           <div className="flex gap-4 flex-wrap">
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="bg-blue-600 px-8 py-4 rounded-xl hover:bg-blue-700"
             >
               Get Product Catalog
-            </a>
+            </Link>
 
             <a
               href="/services"
@@ -644,12 +645,12 @@ const Products = () => {
                     </p>
 
                     {/* CTA */}
-                    <a
-                      href="/contact"
+                    <Link
+                      to="/contact"
                       className="inline-flex mt-5 items-center text-blue-600 font-medium"
                     >
                       Request Quote
-                    </a>
+                    </Link>
                   </div>
                 ))}
               </div>
@@ -717,12 +718,13 @@ const Products = () => {
               consultation tailored to your business needs.
             </p>
 
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="w-full flex justify-center items-center bg-slate-800 text-white px-6 py-4 rounded-xl hover:bg-slate-900"
             >
-              Get Free Quote <ArrowRight className="ml-2 h-5 w-5" />
-            </a>
+              Get Free Quote
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
 
             <p className="text-sm text-gray-500 text-center mt-4">
               Fast response • Global supply
