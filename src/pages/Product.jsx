@@ -649,7 +649,7 @@ const Products = () => {
                       to="/contact"
                       className="inline-flex mt-5 items-center text-blue-600 font-medium"
                     >
-                      Request Quote
+                      Contact Us
                     </Link>
                   </div>
                 ))}

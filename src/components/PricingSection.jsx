@@ -230,17 +230,18 @@ const PricingSection = () => {
         </div>
 
         {/* CTA */}
-        <div className="mt-8">
-         <Link
-  to="/contact"
-  className="inline-flex items-center justify-center bg-blue-900 hover:bg-blue-950 text-white px-10 py-4 rounded-xl font-medium transition-all duration-300"
->
-  Book a Free Consultation
-  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-</Link>
+        <div className="mt-8 flex flex-col sm:flex-row gap-4 sm:gap-6 items-center sm:items-start">
+          <Link
+            to="/contact"
+            className="w-full sm:w-auto inline-flex items-center justify-center bg-blue-900 hover:bg-blue-950 text-white px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-medium transition-all duration-300"
+          >
+            Book a Free Consultation
+            <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
+          </Link>
+
           <a
             href="https://wa.me/919175318983"
-            className="ml-4 inline-flex items-center justify-center border border-slate-400 text-gray-700 hover:border-blue-500 hover:text-blue-400 px-10 py-4 rounded-xl font-medium transition-all duration-300"
+            className="w-full sm:w-auto inline-flex items-center justify-center border border-slate-400 text-gray-700 hover:border-blue-500 hover:text-blue-400 px-6 sm:px-10 py-3 sm:py-4 rounded-xl font-medium transition-all duration-300"
           >
             WhatsApp Our Trade Expert
           </a>

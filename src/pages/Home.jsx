@@ -302,7 +302,7 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-14 bg-white relative">
+      {/* <section className="py-14 bg-white relative">
         <div className="container mx-auto px-6">
           <div
             className={`transition-all duration-1000 ${
@@ -336,7 +336,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section id="products" className="py-10 bg-slate-50">
         <div className="container mx-auto px-6">
@@ -434,7 +434,7 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-14 bg-slate-50">
+      <section className="py-10 bg-slate-50">
         <div className="container mx-auto px-6">
           <div
             className="transition-all duration-1000 ease-out opacity-100 translate-y-0"
@@ -616,6 +616,21 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <div className="mb-14 max-w-5xl mx-auto">
+  <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+    <iframe
+      src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+      width="100%"
+      height="400"
+      style={{ border: 0 }}
+      allowFullScreen=""
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+      title="Google Map"
+    ></iframe>
+  </div>
+</div>
     </div>
   );
 };

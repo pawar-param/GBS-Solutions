@@ -254,7 +254,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Info Cards */}
-      <section className="py-24 bg-gray-50 relative">
+      <section className="py-10 bg-gray-50 relative">
         <div className="container mx-auto px-6">
           <div
             className={`transform transition-all duration-1000 ${
@@ -313,6 +313,21 @@ const Contact = () => {
           </div>
         </div>
       </section>
+      {/* Google Map */}
+      <div className="mt-10 max-w-6xl mx-auto">
+        <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+          <iframe
+            src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map"
+          ></iframe>
+        </div>
+      </div>
 
       {/* Contact Form Section */}
       <section className="relative py-24 bg-gradient-to-br from-slate-50/50 to-blue-50/30">
