@@ -96,8 +96,14 @@ const About = () => {
   return (
     <div className="min-h-screen bg-gray-50 overflow-hidden">
       {/* About Page Hero Section */}
-      <section className="relative bg-slate-800 text-white">
-        <div className="container mx-auto px-6 py-10 lg:py-14">
+      <section
+        className="relative text-white bg-cover bg-center"
+        style={{ backgroundImage: "url('/About.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        <div className="relative container mx-auto px-6 py-10 lg:py-14">
           {/* 3 Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 items-center">
             {/* LEFT CONTENT – 2 COLUMNS */}
@@ -147,7 +153,7 @@ const About = () => {
 
             {/* RIGHT CONTENT – 1 COLUMN */}
             <div className="hidden lg:block">
-              <div className="bg-slate-700 border border-slate-800 rounded-2xl p-10 shadow-xl">
+              <div className="bg-slate-700/80 backdrop-blur-md border border-slate-800 rounded-2xl p-10 shadow-xl">
                 <h3 className="text-lg font-medium mb-6">
                   Why Businesses Trust Us
                 </h3>

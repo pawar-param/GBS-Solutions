@@ -184,53 +184,114 @@ const categories = [
     ],
   },
   {
-    title: "Conveyor Components",
-    icon: <Factory />,
+    title: "Home Decor & Handicrafts",
+    icon: <Package />,
     items: [
+      // {
+      //   name: "Tray (Custom Size)",
+      //   image: "/Image/products/tray.png",
+      //   description:
+      //     "Decorative wooden or metal serving trays with handmade finishing.",
+      // },
       {
-        name: "Conveyor Idler Roller Set (Dia 89mm to 219mm, Length 150mm to 2400mm)",
-        image: "/Image/products/conveyor-idler-roller.png",
+        name: "Cushion Covers (12x12 / 16x16 / 18x18, Custom Size)",
+        image: "/Image/products/cushion-covers.png",
         description:
-          "Conveyor Idler Roller Sets are used to support and guide conveyor belts for smooth material handling operations. These rollers reduce friction, support belt load, and ensure efficient conveyor performance in industrial environments.",
+          "Cotton or embroidered cushion covers with traditional designs.",
+      },
+      // {
+      //   name: "Table Runner with Mat (Custom Size)",
+      //   image: "/Image/products/table-runner.png",
+      //   description:
+      //     "Decorative fabric table runners with block print or embroidery.",
+      // },
+      {
+        name: "Handbags, Laptop Bags & Tote Bags (Custom Size)",
+        image: "/Image/products/handbags-totes.jpeg",
+        description: "Reusable cotton/jute tote bags for shopping and gifting.",
       },
       {
-        name: "Conveyor Impact Roller Set (Rubber Ring Cushioning, Heavy Duty Frame)",
-        image: "/Image/products/conveyor-impact-roller.png",
-        description:
-          "Impact Rollers are designed with rubber rings to absorb shock and impact at conveyor loading points, protecting the belt from damage and increasing conveyor system life.",
+        name: "Bed Covers (Custom Size)",
+        image: "/Image/products/bed-covers.jpg",
+        description: "Cotton printed or embroidered bed covers for home décor.",
       },
       {
-        name: "Guide Rollers (Vertical/Horizontal Rubber Coated)",
-        image: "/Image/products/guide-rollers.jpeg",
+        name: "Toran & Rangoli (Standard)",
+        image: "/Image/products/toran-rangoli.jpg",
         description:
-          "Conveyor guide rollers (side rollers) keep the conveyor belt aligned with the conveyor frame.",
+          "Traditional decorative door hangings used in Indian festivals.",
       },
       {
-        name: "Conveyor Rollers (Various Diameters, Painted/Galvanized)",
-        image: "/Image/products/conveyor-rollers.png",
+        name: "Diyas (Custom Size)",
+        image: "/Image/products/diyas.jpeg",
         description:
-          "Standard conveyor return and carry rollers for bulk material handling across industries.",
+          "Clay or decorative diya lamps used for festivals like Diwali.",
       },
       {
-        name: "Drum Roller (Rubber Lagged, Welded Construction)",
-        image: "/Image/products/drum-roller.jpeg",
+        name: "Hangings (Custom Size)",
+        image: "/Image/products/hangings.jpeg",
         description:
-          "Drum Rollers are used in conveyor systems to drive or guide conveyor belts. They are available as drive drums, tail drums, and bend drums.",
+          "Handmade decorative wall hangings made from fabric, beads, or wood.",
       },
       {
-        name: "Conveyor Belts (EP Fabric, Rubber Grade AA/A/B)",
-        image: "/Image/products/conveyor-belts.png",
+        name: "Saree Tassels Design (Custom Size)",
+        image: "/Image/products/saree-tassels.jpeg",
         description:
-          "Conveyor Belts are used for transporting materials from one location to another in industrial and material handling systems.",
+          "Decorative tassels used in curtains, bags, and home décor.",
+      },
+      // {
+      //   name: "Cotton & Silk Clutcher (Standard)",
+      //   image: "/Image/products/clutcher.png",
+      //   description: "Handmade purses with embroidery or fabric designs.",
+      // },
+      {
+        name: "Potlis (Custom Size)",
+        image: "/Image/products/Potlis.jpeg",
+        description:
+          "Traditional drawstring gift bags used for weddings and festivals.",
       },
       {
-        name: "Rubber U-Bidding (Natural/SBR Rubber, Custom Lengths)",
-        image: "/Image/products/rubber-u-bidding.png",
+        name: "Diaries (Standard)",
+        image: "/Image/products/diaries.jpeg",
+        description: "Handmade paper diaries with decorative covers.",
+      },
+      {
+        name: "Diwali Products (Custom Size)",
+        image: "/Image/products/diwali-products.jpeg",
         description:
-          "Rubber U-Bidding is used for edge protection, sealing, and vibration protection in industrial machines and metal sheets. It prevents damage from sharp edges and reduces vibration noise.",
+          "Decorative festive items including diyas, torans, and decor sets.",
+      },
+      // {
+      //   name: "Table Cloth (Custom Size)",
+      //   image: "/Image/products/table-cloth.png",
+      //   description: "Printed or embroidered table cloths.",
+      // },
+      {
+        name: "Hand-Painted Furniture (Standard)",
+        image: "/Image/products/hand-painted-furniture.jpg",
+        description: "Wooden furniture with traditional hand-painted artwork.",
+      },
+      // {
+      //   name: "Wooden Artifacts (Custom Size)",
+      //   image: "/Image/products/wooden-artifacts.png",
+      //   description:
+      //     "Hand-carved wooden mirror frames and decorative pieces for home.",
+      // },
+      {
+        name: "Jute Products",
+        image: "/Image/products/jute-products.jpeg",
+        description:
+          "Stylish handmade handbags made with fabric, jute, or leather.",
+      },
+      {
+        name: "Set of 3 Pouches",
+        image: "/Image/products/set-of-3-pouches.jpeg",
+        description:
+          "Set of 3 multi-purpose pouches in different sizes for better organization. Lightweight, durable, and travel-friendly.",
       },
     ],
   },
+
   {
     title: "Crusher Spare Parts",
     icon: <Factory />,
@@ -358,110 +419,50 @@ const categories = [
     ],
   },
   {
-    title: "Home Decor & Handicrafts",
-    icon: <Package />,
+    title: "Conveyor Components",
+    icon: <Factory />,
     items: [
-      // {
-      //   name: "Tray (Custom Size)",
-      //   image: "/Image/products/tray.png",
-      //   description:
-      //     "Decorative wooden or metal serving trays with handmade finishing.",
-      // },
       {
-        name: "Cushion Covers (12x12 / 16x16 / 18x18, Custom Size)",
-        image: "/Image/products/cushion-covers.png",
+        name: "Conveyor Idler Roller Set (Dia 89mm to 219mm, Length 150mm to 2400mm)",
+        image: "/Image/products/conveyor-idler-roller.png",
         description:
-          "Cotton or embroidered cushion covers with traditional designs.",
-      },
-      // {
-      //   name: "Table Runner with Mat (Custom Size)",
-      //   image: "/Image/products/table-runner.png",
-      //   description:
-      //     "Decorative fabric table runners with block print or embroidery.",
-      // },
-      {
-        name: "Handbags, Laptop Bags & Tote Bags (Custom Size)",
-        image: "/Image/products/handbags-totes.jpeg",
-        description: "Reusable cotton/jute tote bags for shopping and gifting.",
+          "Conveyor Idler Roller Sets are used to support and guide conveyor belts for smooth material handling operations. These rollers reduce friction, support belt load, and ensure efficient conveyor performance in industrial environments.",
       },
       {
-        name: "Bed Covers (Custom Size)",
-        image: "/Image/products/bed-covers.jpg",
-        description: "Cotton printed or embroidered bed covers for home décor.",
-      },
-      {
-        name: "Toran & Rangoli (Standard)",
-        image: "/Image/products/toran-rangoli.jpg",
+        name: "Conveyor Impact Roller Set (Rubber Ring Cushioning, Heavy Duty Frame)",
+        image: "/Image/products/conveyor-impact-roller.png",
         description:
-          "Traditional decorative door hangings used in Indian festivals.",
+          "Impact Rollers are designed with rubber rings to absorb shock and impact at conveyor loading points, protecting the belt from damage and increasing conveyor system life.",
       },
       {
-        name: "Diyas (Custom Size)",
-        image: "/Image/products/diyas.jpeg",
+        name: "Guide Rollers (Vertical/Horizontal Rubber Coated)",
+        image: "/Image/products/guide-rollers.jpeg",
         description:
-          "Clay or decorative diya lamps used for festivals like Diwali.",
+          "Conveyor guide rollers (side rollers) keep the conveyor belt aligned with the conveyor frame.",
       },
       {
-        name: "Hangings (Custom Size)",
-        image: "/Image/products/hangings.jpeg",
+        name: "Conveyor Rollers (Various Diameters, Painted/Galvanized)",
+        image: "/Image/products/conveyor-rollers.png",
         description:
-          "Handmade decorative wall hangings made from fabric, beads, or wood.",
+          "Standard conveyor return and carry rollers for bulk material handling across industries.",
       },
       {
-        name: "Saree Tassels Design (Custom Size)",
-        image: "/Image/products/saree-tassels.jpeg",
+        name: "Drum Roller (Rubber Lagged, Welded Construction)",
+        image: "/Image/products/drum-roller.jpeg",
         description:
-          "Decorative tassels used in curtains, bags, and home décor.",
+          "Drum Rollers are used in conveyor systems to drive or guide conveyor belts. They are available as drive drums, tail drums, and bend drums.",
       },
-      // {
-      //   name: "Cotton & Silk Clutcher (Standard)",
-      //   image: "/Image/products/clutcher.png",
-      //   description: "Handmade purses with embroidery or fabric designs.",
-      // },
       {
-        name: "Potlis (Custom Size)",
-        image: "/Image/products/Potlis.jpeg",
+        name: "Conveyor Belts (EP Fabric, Rubber Grade AA/A/B)",
+        image: "/Image/products/conveyor-belts.png",
         description:
-          "Traditional drawstring gift bags used for weddings and festivals.",
+          "Conveyor Belts are used for transporting materials from one location to another in industrial and material handling systems.",
       },
       {
-        name: "Diaries (Standard)",
-        image: "/Image/products/diaries.jpeg",
-        description: "Handmade paper diaries with decorative covers.",
-      },
-      {
-        name: "Diwali Products (Custom Size)",
-        image: "/Image/products/diwali-products.jpeg",
+        name: "Rubber U-Bidding (Natural/SBR Rubber, Custom Lengths)",
+        image: "/Image/products/rubber-u-bidding.png",
         description:
-          "Decorative festive items including diyas, torans, and decor sets.",
-      },
-      // {
-      //   name: "Table Cloth (Custom Size)",
-      //   image: "/Image/products/table-cloth.png",
-      //   description: "Printed or embroidered table cloths.",
-      // },
-      {
-        name: "Hand-Painted Furniture (Standard)",
-        image: "/Image/products/hand-painted-furniture.jpg",
-        description: "Wooden furniture with traditional hand-painted artwork.",
-      },
-      // {
-      //   name: "Wooden Artifacts (Custom Size)",
-      //   image: "/Image/products/wooden-artifacts.png",
-      //   description:
-      //     "Hand-carved wooden mirror frames and decorative pieces for home.",
-      // },
-      {
-        name: "Jute Products",
-        image: "/Image/products/jute-products.jpeg",
-        description:
-          "Stylish handmade handbags made with fabric, jute, or leather.",
-      },
-      {
-        name: "Set of 3 Pouches",
-        image: "/Image/products/set-of-3-pouches.jpeg",
-        description:
-          "Set of 3 multi-purpose pouches in different sizes for better organization. Lightweight, durable, and travel-friendly.",
+          "Rubber U-Bidding is used for edge protection, sealing, and vibration protection in industrial machines and metal sheets. It prevents damage from sharp edges and reduces vibration noise.",
       },
     ],
   },
@@ -484,8 +485,14 @@ const Products = () => {
   return (
     <main className="bg-slate-50 text-gray-900">
       {/* HERO */}
-      <section className="bg-slate-900 text-white">
-        <div className="container mx-auto px-6 py-16">
+      <section
+        className="relative text-white bg-cover bg-center"
+        style={{ backgroundImage: "url('/product.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        <div className="container mx-auto px-6 py-16 relative z-10">
           <p className="text-sm uppercase text-blue-400 mb-4">
             Indian Exporters | Global Product Supply
           </p>
@@ -575,24 +582,39 @@ const Products = () => {
                 {categories.map((cat, i) => (
                   <div
                     key={i}
-                    className="bg-white p-8 rounded-2xl border hover:shadow-lg transition cursor-pointer"
                     onClick={() => setSelectedCategory(cat)}
+                    className="relative rounded-2xl overflow-hidden cursor-pointer group"
+                    style={{
+                      backgroundImage: `url(${cat.items?.[0]?.image})`,
+                      backgroundSize: "cover",
+                      backgroundPosition: "center",
+                    }}
                   >
-                    <div className="w-12 h-12 bg-blue-100 text-blue-600 flex items-center justify-center rounded-lg mb-4">
-                      {cat.icon}
-                    </div>
+                    {/* Overlay */}
+                    <div className="absolute inset-0 bg-black/60 group-hover:bg-black/70 transition"></div>
 
-                    <h3 className="text-xl font-semibold mb-4">{cat.title}</h3>
+                    {/* Content */}
+                    <div className="relative p-8 text-white">
+                      <div className="w-12 h-12 bg-white/20 backdrop-blur-md text-white flex items-center justify-center rounded-lg mb-4">
+                        {cat.icon}
+                      </div>
 
-                    <div className="text-gray-600 text-sm">
-                      {cat.items && cat.items.length > 0 ? (
-                        cat.items
-                          .slice(0, 5)
-                          .map((item, idx) => <div key={idx}>{item.name}</div>)
-                      ) : (
-                        <div>No items available</div>
-                      )}
-                      {cat.items.length > 5 && <div>...</div>}
+                      <h3 className="text-xl font-semibold mb-4">
+                        {cat.title}
+                      </h3>
+
+                      <div className="text-gray-200 text-sm">
+                        {cat.items && cat.items.length > 0 ? (
+                          cat.items
+                            .slice(0, 5)
+                            .map((item, idx) => (
+                              <div key={idx}>{item.name}</div>
+                            ))
+                        ) : (
+                          <div>No items available</div>
+                        )}
+                        {cat.items.length > 5 && <div>...</div>}
+                      </div>
                     </div>
                   </div>
                 ))}
@@ -626,7 +648,7 @@ const Products = () => {
                       <img
                         src={item.image}
                         alt={item.name}
-                        className="w-52 h-48 object-cover rounded-lg mb-3"
+                        className="w-104 h-84 object-cover rounded-lg mb-3"
                       />
                     ) : (
                       <div className="w-32 h-32 bg-gray-200 rounded-lg flex items-center justify-center text-gray-400 mb-3">

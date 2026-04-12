@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Select from "react-select";
+import { BookOpen, Youtube } from "lucide-react"; // or any icon you like
 import { Link } from "react-router-dom";
 import {
   Phone,
@@ -131,8 +133,8 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Location",
-      content: "Pune, Maharashtra, India",
-      subtitle: "India",
+      content:
+        "FL NO A507 Rose Galaxy Haveli Pune Pimpri Chinchwad (M Corp.) 412105",
       gradient: "from-green-500 to-emerald-500",
       href: "#",
     },
@@ -148,12 +150,57 @@ const Contact = () => {
 
   const services = {
     Product: [
-      "Export & Import Services",
-      "Trade Documentation & Compliance",
-      "Global Sourcing & Market Research",
-      "Logistics & Customs Coordination",
-      "Consulting & Advisory",
-      "Training & Capacity Building",
+      "Jack Screw Rod (Load Bearing Capacity 1 Ton)",
+      "Jack Screw Rod (Load Bearing Capacity 1.2 Ton)",
+      "Jack Screw Rod (Load Bearing Capacity 1.5 Ton)",
+      "Jack Screw Rod (Load Bearing Capacity 5 Ton)",
+      "Gear Shifting Lever Knob",
+      "Agricultural Equipments",
+      "Industrial Fasteners",
+      "Jack Screw Nut",
+      "Machined Components",
+      "Moulding Inserts",
+      "Spacer Nut",
+
+      "Conveyor Idler Roller Set",
+      "Conveyor Impact Roller Set",
+      "Guide Rollers",
+      "Conveyor Rollers",
+      "Drum Roller",
+      "Conveyor Belts",
+      "Rubber U-Bidding",
+
+      "Jaw Plates",
+      "Crusher Bolts",
+      "Crusher Bearings",
+      "Industrial Gearbox",
+      "Heavy Springs",
+
+      "Wiremesh Screens",
+      "Vibrating Screen Machine & Spares",
+      "Bearing Housing",
+      "Vibro Motor",
+      "C-Clamp for Vibrator",
+
+      "Perforated Sheets",
+      "Industrial Motors",
+      "Toggle Bearings",
+      "Pillow Block Bearing",
+      "Pedestal Bearing",
+
+      "Cushion Covers",
+      "Handbags, Laptop Bags & Tote Bags",
+      "Bed Covers",
+      "Toran & Rangoli",
+      "Diyas",
+      "Hangings",
+      "Saree Tassels Design",
+      "Potlis",
+      "Diaries",
+      "Diwali Products",
+      "Hand-Painted Furniture",
+      "Jute Products",
+      "Set of 3 Pouches",
     ],
     Service: [
       "Trade Documentation & Compliance",
@@ -185,12 +232,28 @@ const Contact = () => {
       href: "https://www.facebook.com/profile.php?id=61587915955385",
       icon: <Facebook />,
     },
+    {
+      label: "YouTube",
+      href: "https://www.youtube.com/channel/UCRhPYwq-GbdVt4GrEZuTwYw", // 🔁 replace with your channel link
+      icon: <Youtube />,
+    },
+    {
+      label: "Blog",
+      href: "https://absglobalexim.blogspot.com/2026/04/lcl-vs-fcl-shipment-which-one-is-right.html", // or your blog URL
+      icon: <BookOpen />,
+    },
   ];
 
   return (
     <div className="min-h-screen bg-gray-50 overflow-hidden">
       {/* Hero Section */}
-      <section className="relative py-10 bg-slate-800 text-white overflow-hidden">
+      <section
+        className="relative py-10 text-white overflow-hidden bg-cover bg-center"
+        style={{ backgroundImage: "url('/CONTACT.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 items-center">
             {/* LEFT CONTENT – 2 Columns */}
@@ -236,7 +299,7 @@ const Contact = () => {
 
             {/* RIGHT CONTENT – 1 Column */}
             <div className="hidden lg:block">
-              <div className="bg-slate-700 border border-slate-800 rounded-2xl p-10 shadow-xl">
+              <div className="bg-slate-700/80 backdrop-blur-md border border-slate-800 rounded-2xl p-10 shadow-xl">
                 <h3 className="text-lg font-medium mb-6">HOW WE WORK</h3>
 
                 <ul className="space-y-4 text-gray-300 text-sm">
@@ -314,10 +377,10 @@ const Contact = () => {
         </div>
       </section>
       {/* Google Map */}
-      <div className="mt-10 max-w-6xl mx-auto">
+      <div className="py-5 max-w-5xl mx-auto">
         <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
           <iframe
-            src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
+            src="https://www.google.com/maps?q=FL%20NO%20A507%20Rose%20Galaxy%20Haveli%20Pune%20Pimpri%20Chinchwad%20412105&output=embed"
             width="100%"
             height="400"
             style={{ border: 0 }}
@@ -472,29 +535,61 @@ const Contact = () => {
                       </div>
 
                       {/* Second Dropdown: Subject */}
+
                       <div>
                         <label className="block text-sm font-semibold text-slate-900 mb-2">
                           Subject
                         </label>
-                        <select
-                          name="subject"
-                          value={formData.subject}
-                          onChange={handleInputChange}
-                          className="w-full px-4 py-4 border border-slate-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                          required
-                          disabled={!formData.serviceType} // Disable until type is selected
-                        >
-                          <option value="">Select a service</option>
-                          {formData.serviceType &&
-                            services[formData.serviceType].map(
-                              (service, index) => (
-                                <option key={index} value={service}>
-                                  {service}
-                                </option>
-                              ),
-                            )}
-                          <option value="general">General Inquiry</option>
-                        </select>
+
+                        <Select
+                          options={
+                            formData.serviceType
+                              ? services[formData.serviceType].map(
+                                  (service) => ({
+                                    label: service,
+                                    value: service,
+                                  }),
+                                )
+                              : []
+                          }
+                          placeholder="Select a service"
+                          isDisabled={!formData.serviceType}
+                          value={
+                            formData.serviceType
+                              ? services[formData.serviceType]
+                                  .map((service) => ({
+                                    label: service,
+                                    value: service,
+                                  }))
+                                  .find(
+                                    (opt) => opt.value === formData.subject,
+                                  ) || null
+                              : null
+                          }
+                          onChange={(selected) =>
+                            handleInputChange({
+                              target: {
+                                name: "subject",
+                                value: selected.value,
+                              },
+                            })
+                          }
+                          styles={{
+                            control: (base) => ({
+                              ...base,
+                              padding: "6px",
+                              borderRadius: "12px",
+                              borderColor: "#cbd5e1",
+                              boxShadow: "none",
+                            }),
+                            menu: (base) => ({
+                              ...base,
+                              maxHeight: 300, // 👈 only ~5 items visible
+                              overflowY: "auto",
+                              borderRadius: "12px",
+                            }),
+                          }}
+                        />
                       </div>
                     </div>
 

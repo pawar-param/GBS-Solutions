@@ -80,8 +80,14 @@ const Services = () => {
   return (
     <main className="bg-slate-50 text-gray-900">
       {/* Hero Section */}
-      <section className="relative bg-slate-800 text-white ">
-        <div className="container mx-auto px-6 py-10 lg:py-14">
+      <section
+        className="relative text-white bg-cover bg-center"
+        style={{ backgroundImage: "url('/service.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        <div className="container mx-auto px-6 py-10 lg:py-14 relative z-10">
           <div
             className={`transition-all duration-1000 ${
               services ? "opacity-100 translate-y-0" : ""
@@ -90,6 +96,7 @@ const Services = () => {
             <p className="text-sm tracking-wide uppercase text-blue-300 mb-4">
               Our Expertise in Global Trade
             </p>
+
             <h1 className="text-4xl md:text-5xl font-semibold leading-tight mb-6">
               Comprehensive Services
               <br />
@@ -97,11 +104,13 @@ const Services = () => {
                 to Expand Your Business Globally
               </span>
             </h1>
+
             <p className="text-blue-100 text-lg leading-relaxed mb-10">
               From documentation and compliance to market research and
               consulting, we provide end-to-end solutions that ensure smooth
               international trade operations.
             </p>
+
             <div className="flex flex-wrap gap-4">
               <Link
                 to="/contact"
@@ -109,6 +118,7 @@ const Services = () => {
               >
                 Speak with a Consultant
               </Link>
+
               <a
                 href="https://wa.me/919175318983"
                 className="border border-slate-400 text-blue-100 hover:border-blue-500 hover:text-blue-400 px-8 py-4 rounded-xl font-medium transition"

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { BookOpen, Youtube } from "lucide-react"; // or any icon you like
 import {
   Mail,
   Phone,
@@ -54,6 +55,16 @@ const Footer = () => {
       label: "Facebook",
       href: "https://www.facebook.com/profile.php?id=61587915955385",
       icon: <Facebook />,
+    },
+    {
+      label: "YouTube",
+      href: "https://www.youtube.com/channel/UCRhPYwq-GbdVt4GrEZuTwYw", // 🔁 replace with your channel link
+      icon: <Youtube />,
+    },
+    {
+      label: "Blog",
+      href: "https://absglobalexim.blogspot.com/2026/04/lcl-vs-fcl-shipment-which-one-is-right.html", // or your blog URL
+      icon: <BookOpen />,
     },
   ];
 
@@ -158,7 +169,10 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-center md:justify-start">
               <MapPin className="h-5 w-5 text-slate-600 mr-2" />
-              <span className="text-gray-300">Pune, Maharashtra, India</span>
+              <span className="text-gray-300">
+                FL NO A507 Rose Galaxy Haveli Pune Pimpri Chinchwad (M Corp.)
+                412105
+              </span>
             </div>
           </div>
         </div>

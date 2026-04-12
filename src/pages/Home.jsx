@@ -235,8 +235,14 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gray-50 overflow-hidden scroll-smooth">
       {/* Hero Section with Advanced Animation */}
-      <section className="relative bg-slate-800 text-white">
-        <div className="container mx-auto px-6 py-10 lg:py-14">
+      <section
+        className="relative text-white bg-cover bg-center"
+        style={{ backgroundImage: "url('/hero-home.jpg')" }}
+      >
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/70"></div>
+
+        <div className="relative container mx-auto px-6 py-10 lg:py-14">
           {/* 3 Column Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 items-center">
             {/* LEFT CONTENT – 2 COLUMNS */}
@@ -285,7 +291,7 @@ const Home = () => {
 
             {/* RIGHT CONTENT – 1 COLUMN */}
             <div className="hidden lg:block">
-              <div className="bg-slate-700 border border-slate-800 rounded-2xl p-10 shadow-xl">
+              <div className="bg-slate-700/80 backdrop-blur-md border border-slate-800 rounded-2xl p-10 shadow-xl">
                 <h3 className="text-lg font-medium mb-6">Our Core Expertise</h3>
 
                 <ul className="space-y-4 text-gray-300 text-sm">
@@ -302,42 +308,54 @@ const Home = () => {
       </section>
 
       {/* Stats Section */}
-      {/* <section className="py-14 bg-white relative">
-        <div className="container mx-auto px-6">
-          <div
-            className={`transition-all duration-1000 ${
-              isVisible?.stats
-                ? "opacity-100 translate-y-0"
-                : "opacity-0 translate-y-8"
-            }`}
-            id="stats"
-            data-animate
-          >
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
-              {achievements.map((achievement, index) => (
-                <div
-                  key={index}
-                  className="text-center border border-gray-200 rounded-2xl p-8 hover:shadow-lg transition"
-                >
-                  <div className="text-blue-600 mb-4 flex justify-center">
-                    {achievement?.icon}
-                  </div>
+      <section className="relative py-20 bg-white overflow-hidden">
+        {/* Soft Background Glow */}
+        <div className="absolute inset-0">
+          <div className="absolute top-10 left-1/2 w-[400px] h-[400px] bg-blue-100 rounded-full blur-3xl transform -translate-x-1/2 opacity-40"></div>
+        </div>
 
-                  <div className="text-3xl md:text-4xl font-semibold text-gray-900 mb-2">
-                    {achievement?.number}
-                    {achievement?.suffix}
-                  </div>
+        <div className="relative container mx-auto px-6 text-center">
+          {/* Top Label */}
+          <p className="text-sm uppercase tracking-widest text-blue-500 mb-4">
+            Global Presence
+          </p>
 
-                  <div className="text-sm text-gray-600 font-medium">
-                    {achievement?.label}
-                  </div>
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl font-semibold text-gray-900 mb-6 leading-tight">
+            Serving Markets <span className="text-blue-600">Worldwide</span>
+          </h2>
+
+          {/* Description */}
+          <p className="text-gray-600 max-w-2xl mx-auto mb-14 text-lg">
+            We proudly serve clients across major global regions, delivering
+            reliable export-import solutions with trust, compliance, and
+            efficiency.
+          </p>
+
+          {/* Markets Cards */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-6 max-w-5xl mx-auto">
+            {[
+              { name: "USA", icon: "🌍" },
+              { name: "Europe", icon: "🌍" },
+              { name: "Middle East", icon: "🌍" },
+              { name: "Africa", icon: "🌍" },
+              { name: "Asia-Pacific", icon: "🌏" },
+            ].map((region, index) => (
+              <div
+                key={index}
+                className="group bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-2 transition-all duration-300"
+              >
+                <div className="text-3xl mb-3 group-hover:scale-110 transition">
+                  {region.icon}
                 </div>
-              ))}
-            </div>
+                <p className="text-sm font-medium text-gray-700">
+                  {region.name}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
-      </section> */}
-
+      </section>
       <section id="products" className="py-10 bg-slate-50">
         <div className="container mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -539,7 +557,8 @@ const Home = () => {
                           Office Location
                         </p>
                         <p className="text-gray-600 text-sm">
-                          Pune, Maharashtra, India
+                          FL NO A507 Rose Galaxy Haveli Pune Pimpri Chinchwad (M
+                          Corp.) 412105{" "}
                         </p>
                       </div>
                     </div>
@@ -618,19 +637,19 @@ const Home = () => {
       </section>
 
       <div className="mb-14 max-w-5xl mx-auto">
-  <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
-    <iframe
-      src="https://www.google.com/maps?q=Pune,Maharashtra&output=embed"
-      width="100%"
-      height="400"
-      style={{ border: 0 }}
-      allowFullScreen=""
-      loading="lazy"
-      referrerPolicy="no-referrer-when-downgrade"
-      title="Google Map"
-    ></iframe>
-  </div>
-</div>
+        <div className="rounded-3xl overflow-hidden shadow-lg border border-gray-200">
+          <iframe
+            src="https://www.google.com/maps?q=FL%20NO%20A507%20Rose%20Galaxy%20Haveli%20Pune%20Pimpri%20Chinchwad%20412105&output=embed"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Google Map"
+          ></iframe>
+        </div>
+      </div>
     </div>
   );
 };
