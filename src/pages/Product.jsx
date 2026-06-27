@@ -226,13 +226,13 @@ const categories = [
       },
       {
         name: "Diyas (Custom Size)",
-        image: "/Image/products/diyas.jpeg",
+        image: "/Image/products/diya.png",
         description:
           "Clay or decorative diya lamps used for festivals like Diwali.",
       },
       {
         name: "Hangings (Custom Size)",
-        image: "/Image/products/hangings.jpeg",
+        image: "/Image/products/hanging.jpg",
         description:
           "Handmade decorative wall hangings made from fabric, beads, or wood.",
       },
