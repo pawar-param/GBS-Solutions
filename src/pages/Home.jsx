@@ -195,38 +195,44 @@ const Home = () => {
 
   const products = [
     {
-      title: "Industrial Components",
+      // title: "Industrial Components",
       icon: <Cog />,
+      image: "/Image/home/Industrial-Components.png",
       description:
         "High-quality industrial components including motors, bearings, sheets, and fasteners for various applications.",
     },
     {
       title: "Conveyor components",
       icon: <Factory />,
+      image: "/Image/home/Conveyor-components.jpeg",
       description:
         "Complete range of conveyor rollers, belts, and impact rollers designed for smooth material handling.",
     },
     {
-      title: "Crusher Spare Parts",
+      // title: "Crusher Spare Parts",
       icon: <Factory />,
+      image: "/Image/home/Crusher-Spare-Parts.png",
       description:
         "Durable crusher spare parts such as jaw plates, bolts, bearings, and gearboxes for heavy-duty operations.",
     },
     {
-      title: "Vibrating Screen",
+      // title: "Vibrating Screen",
       icon: <Settings />,
+      image: "/Image/home/Vibrating-Screen.png",
       description:
         "Efficient vibrating screens, wiremesh, vibro motors, and accessories for industrial screening solutions.",
     },
     {
       title: "Scissor Jack Screw Rods & Nuts",
       icon: <Car />,
+      image: "/Image/home/Scissor-Jack-Screw-Rods.png",
       description:
         "Reliable screw rods, nuts, and machined components for scissor jacks with different load capacities.",
     },
     {
       title: "Home Decor & Handicrafts",
       icon: <Package />,
+      image: "/Image/home/Home-Decor.jpg",
       description:
         "Beautiful handmade products including trays, cushion covers, bags, torans, and decorative items.",
     },
@@ -372,20 +378,27 @@ const Home = () => {
             {products.map((product, index) => (
               <div
                 key={index}
-                className="bg-white border border-gray-200 rounded-2xl p-8 hover:shadow-xl transition cursor-pointer"
-                onClick={() => navigate(`/products`)}
+                onClick={() => navigate("/products")}
+                className="group overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl cursor-pointer transition-all duration-300"
               >
-                <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-green-600/10 text-green-600 mb-4">
-                  {product.icon}
+                {/* Product Image */}
+                <div className="relative overflow-hidden">
+                  <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-72 object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+
+                  {/* Dark Overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                  {/* Title */}
+                  <div className="absolute bottom-0 left-0 right-0 p-6">
+                    <h3 className="text-white text-2xl font-semibold">
+                      {product.title}
+                    </h3>
+                  </div>
                 </div>
-
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                  {product.title}
-                </h3>
-
-                <p className="text-gray-600 text-sm leading-relaxed">
-                  {product.description}
-                </p>
               </div>
             ))}
           </div>

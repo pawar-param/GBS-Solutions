@@ -114,6 +114,8 @@ const categories = [
   {
     title: "Scissor Jack Screw Rods & Nuts",
     icon: <Car />,
+    catalog:
+      "/catalogs/ABS-GLOBLE-EXIM-Scissor-Jack-Screw-Rods-Nuts-Catalog.pdf",
     items: [
       {
         name: "Jack Screw Rod (Load Bearing Capacity 1 Ton)",
@@ -185,6 +187,7 @@ const categories = [
   },
   {
     title: "Home Decor & Handicrafts",
+    catalog: "/catalogs/ABS-GLOBAL-EXIM-Home-Decor-Handicrafts.pdf",
     icon: <Package />,
     items: [
       // {
@@ -294,6 +297,8 @@ const categories = [
 
   {
     title: "Crusher Spare Parts",
+    catalog:
+      "/catalogs/ABS-GLOBAL-EXIM-Industial-Components-Conveyor-Components-Crusher-Spare-parts-VibratingScreen.pdf",
     icon: <Factory />,
     items: [
       {
@@ -336,6 +341,8 @@ const categories = [
   },
   {
     title: "Vibrating Screen",
+    catalog:
+      "/catalogs/ABS-GLOBAL-EXIM-Industial-Components-Conveyor-Components-Crusher-Spare-parts-VibratingScreen.pdf",
     icon: <Settings />,
     items: [
       {
@@ -378,6 +385,8 @@ const categories = [
   },
   {
     title: "Industrial Components",
+    catalog:
+      "/catalogs/ABS-GLOBAL-EXIM-Industial-Components-Conveyor-Components-Crusher-Spare-parts-VibratingScreen.pdf",
     icon: <Cog />,
     items: [
       {
@@ -420,6 +429,8 @@ const categories = [
   },
   {
     title: "Conveyor Components",
+    catalog:
+      "/catalogs/ABS-GLOBAL-EXIM-Industial-Components-Conveyor-Components-Crusher-Spare-parts-VibratingScreen.pdf",
     icon: <Factory />,
     items: [
       {
@@ -623,18 +634,29 @@ const Products = () => {
           ) : (
             /* 👉 Category Details View */
             <>
-              {/* Back Button */}
-              <button
-                onClick={() => setSelectedCategory(null)}
-                className=" text-blue-600 cursor-pointer font-medium"
-              >
-                ← Back to Categories
-              </button>
+              <div className="flex flex-col md:flex-row items-center justify-between mb-10 gap-4">
+                {/* Back Button */}
+                <button
+                  onClick={() => setSelectedCategory(null)}
+                  className="text-blue-600 font-medium cursor-pointer hover:text-blue-700"
+                >
+                  ← Back to Categories
+                </button>
 
-              {/* Title */}
-              <h2 className="text-3xl font-semibold mb-10 text-center">
-                {selectedCategory.title}
-              </h2>
+                {/* Category Title */}
+                <h2 className="text-3xl font-semibold text-center flex-1">
+                  {selectedCategory.title}
+                </h2>
+
+                {/* Download Catalog Button */}
+                <a
+                  href={selectedCategory.catalog}
+                  download
+                  className="inline-flex items-center cursor-pointer gap-2 bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-xl font-medium transition"
+                >
+                  📄 Download Catalog
+                </a>
+              </div>
 
               {/* Items Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
